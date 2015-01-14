@@ -337,7 +337,6 @@ tt.xref {
 
 #discuss {
     float: left;
-    width: 60%;
 }
 
 em {
