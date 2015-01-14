@@ -26,10 +26,13 @@ gives you super user powers!
 
 这是一段正常文本. 下一段是代码文字::
 
-   它不需要特别处理，仅是
-   缩进就可以了.
+   redis> RPUSH numbers 3 1 2
+   (integer) 3
 
-   它可以有多行.
+   redis> SORT numbers
+   1) "1"
+   2) "2"
+   3) "3
 
 再是正常的文本段.
 
