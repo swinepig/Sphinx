@@ -18,13 +18,9 @@ Or automatically numbered:
  #. Item 1
  #. Item 2
 
-Inline Markup
--------------
-Words can have *emphasis in italics* or be **bold** and you can define
-code samples with back quotes, like when you talk about a command: ``sudo`` 
-gives you super user powers!
 
-下一段是代码区域
+代码区域
+--------
 
 ::
 
@@ -38,6 +34,7 @@ gives you super user powers!
 
 
 表格
+----
 
 =====  =====  =======
 A      B      A and B
@@ -49,6 +46,28 @@ True   True   True
 =====  =====  =======
 
 指令
+----
 
 :dudir:`attention`, :dudir:`caution`, :dudir:`danger`, :dudir:`error`, :dudir:`hint`, :dudir:`important`, :dudir:`note`, :dudir:`tip`, :dudir:`warning`
+
+语法产品
+--------
+.. productionlist::
+   try_stmt: try1_stmt | try2_stmt
+   try1_stmt: "try" ":" `suite`
+            : ("except" [`expression` ["," `target`]] ":" `suite`)+
+            : ["else" ":" `suite`]
+            : ["finally" ":" `suite`]
+   try2_stmt: "try" ":" `suite`
+            : "finally" ":" `suite`
+
+尾注
+----
+
+Lorem ipsum [#1]_ dolor sit amet ... [#2]_
+
+.. rubric:: Footnotes
+
+.. [#1] 第一条尾注的文本.
+.. [#2] 第二条尾注的文本.
  
