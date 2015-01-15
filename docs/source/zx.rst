@@ -41,6 +41,7 @@ your URLs, or to form-encode your POST data. Keep-alive and HTTP connection
 pooling are 100%  automatic, powered by `urllib3 <https://github.com/shazow/urllib3>`_,
 which is embedded within Requests.
 
+.. _testtimonials-label:
 
 Testimonials
 ------------
@@ -120,4 +121,6 @@ Contributor Guide
 If you want to contribute to the project, this part of the documentation is for
 you.
 
+*回到Testimonials* :ref:`testtimonials-label`
 
+:menuselection:`Start --> Programs`
