@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    helloworld 
+   zx 
 
 Indices and tables
 ==================
