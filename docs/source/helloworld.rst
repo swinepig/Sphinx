@@ -47,4 +47,8 @@ True   False  False
 False  True   False
 True   True   True
 =====  =====  =======
+
+指令
+
+:dudir:`attention`, :dudir:`caution`, :dudir:`danger`, :dudir:`error`, :dudir:`hint`, :dudir:`important`, :dudir:`note`, :dudir:`tip`, :dudir:`warning`
  
