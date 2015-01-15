@@ -92,7 +92,7 @@ User Guide
 
 This part of the documentation, which is mostly prose, begins with some
 background information about Requests, then focuses on step-by-step
-instructions for getting the most out of Requests朱鑫.
+instructions for getting the most out of Requests ``朱鑫`` .
 
 
 
