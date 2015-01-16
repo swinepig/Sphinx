@@ -236,8 +236,8 @@ div.note {
     /* border: 2px solid #7a9eec; */
     border-right-style: none;
     border-left-style: none;
-    padding: 10px;
-    background: #e1ecfe url(../images/dialog-note.png) 15px 15px no-repeat;
+    padding: 10px 15px 10px 70px;
+    background: #e1ecfe url(note.png) 15px 15px no-repeat;
 }
  
 div.seealso {
@@ -261,8 +261,8 @@ div.warning {
     /* border: 2px solid #fbc2c4; */
     border-right-style: none;
     border-left-style: none;
-    padding: 10px;
-    background: #fbe3e4 url(../images/dialog-warning.png) 15px 15px no-repeat;
+    padding: 10px 15px 10px 70px;
+    background: #fbe3e4 url(warning.png) 15px 15px no-repeat;
 }
 
 div.danger {
@@ -270,7 +270,8 @@ div.danger {
     /* border: 2px solid #fbc2c4; */
     border-right-style: none;
     border-left-style: none;
-    padding: 10px;
+    padding: 10px 15px 10px 70px;
+    background: #fbe3e4 url(danger.png) 15px 15px no-repeat;
 }
  
 p.admonition-title {
