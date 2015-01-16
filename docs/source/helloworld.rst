@@ -32,6 +32,10 @@ Or automatically numbered:
    2) "2"
    3) "3
 
+尾注
+----
+
+Lorem ipsum [#]_ dolor sit amet ... [#]_
 
 表格
 ----
@@ -48,7 +52,21 @@ True   True   True
 指令
 ----
 
-:dudir:`attention`, :dudir:`caution`, :dudir:`danger`, :dudir:`error`, :dudir:`hint`, :dudir:`important`, :dudir:`note`, :dudir:`tip`, :dudir:`warning`
+.. note:: 
+   note注意
+
+.. warning::
+   warning警告
+   
+.. tip::
+   tip
+   
+.. danger::
+   danger危险
+   
+.. error::
+   error错误
+
 
 语法产品
 --------
@@ -61,13 +79,23 @@ True   True   True
    try2_stmt: "try" ":" `suite`
             : "finally" ":" `suite`
 
-尾注
+
+函数
 ----
 
-Lorem ipsum [#1]_ dolor sit amet ... [#2]_
+.. py:function:: format_exception(etype, value, tb[, limit=None])
+
+   Format the exception with a traceback.
+
+   :param etype: exception type
+   :param value: exception value
+   :param tb: traceback object
+   :param limit: maximum number of stack frames to show
+   :type limit: integer or None
+   :rtype: list of strings
 
 .. rubric:: Footnotes
 
-.. [#1] 第一条尾注的文本.
-.. [#2] 第二条尾注的文本.
+.. [#] 第一条尾注的文本.
+.. [#] 第二条尾注的文本.
  
