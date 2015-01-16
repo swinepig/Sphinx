@@ -58,14 +58,9 @@ True   True   True
 .. warning::
    warning警告
    
-.. tip::
-   tip
-   
 .. danger::
    danger危险
-   
-.. error::
-   error错误
+
 
 
 语法产品
