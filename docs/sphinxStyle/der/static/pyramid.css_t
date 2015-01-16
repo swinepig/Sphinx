@@ -266,12 +266,12 @@ div.warning {
 }
 
 div.danger {
-    background-color: #FA9B8E;
+    /* background-color: #FA9B8E; */
     /* border: 2px solid #fbc2c4; */
     border-right-style: none;
     border-left-style: none;
     padding: 10px 15px 10px 70px;
-    background: #fbe3e4 url(danger.png) 15px 15px no-repeat;
+    background: #FA9B8E url(danger.png) 15px 15px no-repeat;
 }
  
 p.admonition-title {
