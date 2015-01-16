@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ï»¿# -*- coding: utf-8 -*-
 #
 # swinepig documentation build configuration file, created by
 # sphinx-quickstart on Wed Jan 14 11:12:28 2015.
@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'swinepig'
-copyright = u'2015, ZhuXin(ÖìöÎ)'
+copyright = u'2015, ZhuXin(æœ±é‘«)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -121,7 +121,7 @@ html_theme_path = ['../sphinxStyle']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = 'swinepig doc'
+html_title = 'swinepig doc'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -287,3 +287,4 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}
+ 
