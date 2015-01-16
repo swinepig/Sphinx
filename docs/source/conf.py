@@ -111,10 +111,6 @@ html_theme = 'der'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
-html_theme_options = {
-    "rightsidebar": "true",
-    "relbarbgcolor": "white"
-}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['../sphinxStyle']
@@ -287,4 +283,4 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}
- 
+ 
