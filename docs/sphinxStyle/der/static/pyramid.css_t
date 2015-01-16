@@ -27,9 +27,8 @@ div.documentwrapper {
 }
 
 div.bodywrapper {
-    /* margin: 0 0 0 {{ theme_sidebarwidth }}px; */
-    width: 82%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 0 0 0 330px;
 }
 
 hr {
@@ -113,7 +112,8 @@ div.sphinxsidebar {
 }
 
 div.sphinxsidebarwrapper{
-    padding: padding: 10px 10px 0px 30px;
+    padding: 10px 10px 0px 60px;
+    width: 100%
 }
  
 div.sphinxsidebar h3,
