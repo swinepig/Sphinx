@@ -107,7 +107,7 @@ div.related ul a:hover {
 }
 
 div.sphinxsidebar {
-    font-size: 0.75em;
+    font-size: 0.85em;
     line-height: 1.5em;
 }
 
@@ -124,7 +124,7 @@ div.sphinxsidebar h4 {
     font-weight: normal;
     margin: 0;
     padding: 10px 10px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: dotted thin #CFC8C8;
 }
 
 div.sphinxsidebar h4{
@@ -148,6 +148,7 @@ div.sphinxsidebar ul {
     margin: 10px 20px;
     padding: 0;
     color: #373839;
+    font-style: italic;
 }
  
 div.sphinxsidebar a {
