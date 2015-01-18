@@ -280,7 +280,7 @@ p.admonition-title {
 }
  
 p.admonition-title:after {
-    content: ":";
+    /* content: ":"; */
 }
  
 pre {
