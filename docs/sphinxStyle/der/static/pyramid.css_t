@@ -278,10 +278,7 @@ div.danger {
 p.admonition-title {
     display: block;
 }
- 
-p.admonition-title:after {
-    /* content: ":"; */
-}
+
  
 pre {
     background-color: #e4ffde;
