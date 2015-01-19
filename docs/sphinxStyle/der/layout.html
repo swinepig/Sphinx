@@ -36,7 +36,7 @@
           {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
         {%- endfor %}
         {%- block rootrellink %}
-        <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
+        <li><img class="logo" src="{{ pathto('_static/1.png', 1) }}"/></li>
         {%- endblock %}
         {%- for parent in parents %}
           <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>

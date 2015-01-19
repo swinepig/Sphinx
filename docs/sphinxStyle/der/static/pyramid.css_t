@@ -358,3 +358,10 @@ body a:hover, body a:hover .pre, a .pre:hover{
     color:white;
     background-color: {{ theme_color }};
 }
+
+li .logo{
+    border: 0;
+    max-width: 7%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
