@@ -1,12 +1,9 @@
-﻿This is a Title
-===============
-That has a paragraph about a main subject and is set when the '='
-is at least the same length of the title itself.
+﻿部分语法
+========
 
-Subject Subtitle
-----------------
-Subtitles are set with '-' and are required to have the same length 
-of the subtitle itself, just like titles.
+
+列表
+----
 
 Lists can be unnumbered like:
 
