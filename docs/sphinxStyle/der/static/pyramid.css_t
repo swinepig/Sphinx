@@ -24,6 +24,7 @@ body {
 div.documentwrapper {
     float: left;
     width: 100%;
+    padding-bottom: 10px;
 }
 
 div.bodywrapper {
@@ -58,7 +59,7 @@ div.body {
 }
  
 div.footer {
-    color: #555;
+    color: rgba(241, 240, 240, 0.61);
     width: 100%;
     padding: 13px 0;
     text-align: center;
