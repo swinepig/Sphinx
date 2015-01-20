@@ -242,11 +242,10 @@ div.note {
 }
  
 div.seealso {
-    background-color: #fff6bf;
-    border: 2px solid #ffd324;
     border-left-style: none;
     border-right-style: none;
-    padding: 10px;
+    padding: 10px 15px 10px 70px;
+    background: #fff6bf url(seealso.png) 15px 15px no-repeat;
 }
  
 div.topic {

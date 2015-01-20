@@ -39,7 +39,6 @@
         <li><img class="logo" src="{{ pathto('_static/1.png', 1) }}"/></li>
         {%- endblock %}
         {%- for parent in parents %}
-          <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
         {%- endfor %}
         {%- block relbaritems %} {% endblock %}
       </ul>
