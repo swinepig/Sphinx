@@ -17,14 +17,14 @@ body {
     font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: #ffffff;
-    margin: 0;
+    margin: 0.5em 0.8em 0 0.8em;
     padding: 0;
 }
 
 div.documentwrapper {
     float: left;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 div.bodywrapper {
@@ -64,7 +64,7 @@ div.footer {
     padding: 13px 0;
     text-align: center;
     font-size: 75%;
-    background: rgba(241, 240, 240, 0.61);
+    /*background: rgba(241, 240, 240, 0.61);*/
     clear:both;
 }
  
@@ -83,6 +83,8 @@ div.related {
     color: #373839;
     font-size: 0.8em;
     /* background-color: #eee; */
+    border-bottom: 1px solid #ccc;
+    padding:0.5em 0;
 }
  
 div.related a {
@@ -361,7 +363,7 @@ body a:hover, body a:hover .pre, a .pre:hover{
 
 li .logo{
     border: 0;
-    max-width: 7%;
+    max-width: 6%;
     margin-top: 4px;
     margin-bottom: 4px;
 }
