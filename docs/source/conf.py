@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'swinepig'
-copyright = u'2015, ZhuXin(朱鑫)'
+copyright = u'2015, 朱鑫(zhuxin)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -152,8 +152,8 @@ html_static_path = ['_static']
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
 html_sidebars = {
-    'index':    ['sidebarintro.html', 'searchbox.html'],
-    '**':       ['sidebarlogo.html', 'localtoc.html', 'relations.html', 'searchbox.html']
+    'index':    ['sidebarintro.html'],
+    '**':       ['sidebarlogo.html', 'localtoc.html', 'relations.html']
 }
 
 # Additional templates that should be rendered to pages, maps page names to

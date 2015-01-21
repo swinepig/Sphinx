@@ -25,6 +25,22 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+{%- macro relbar() %}
+    <div class="related">
+      <h3>{{ _('Navigation') }}</h3>
+      <ul>
+        {%- for rellink in rellinks %}
+        {%- endfor %}
+        {%- block rootrellink %}
+        <li><img class="logo" src="{{ pathto('_static/1.png', 1) }}"/></li>
+        {{ super() }}
+        {%- endblock %}
+        {%- for parent in parents %}
+        {%- endfor %}
+        {%- block relbaritems %} {% endblock %}
+      </ul>
+    </div>
+{%- endmacro %}
 
 {%- macro sidebar() %}{%- endmacro %}
 
@@ -118,7 +134,7 @@
 
 {% endblock %}
 
-{%- block relbar1 %}{% endblock %}
+{%- block relbar1 %}{{ relbar() }}{% endblock %}
 
 {%- block content %}
   {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
