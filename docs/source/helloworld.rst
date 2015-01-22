@@ -98,7 +98,7 @@ MathJax开发文档:
 	
 利用 ``CSS`` 计数器为非内联公式加入编号。以下为修改 ``CSS`` 样式:
 
-::
+.. highlight:: css
 
    body {
      counter-reset:section 0;
