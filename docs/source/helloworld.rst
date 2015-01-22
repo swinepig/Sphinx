@@ -95,6 +95,37 @@ MathJax开发文档:
  * `PDF <https://media.readthedocs.org/pdf/mathjax/v2.2-latest/mathjax.pdf/>`_
  
 `LaTeX在线编辑器 <http://zh.numberempire.com/texequationeditor/equationeditor.php/>`_
+	
+利用 ``CSS`` 计数器为非内联公式加入编号。以下为修改 ``CSS`` 样式:
+
+::
+
+   body {
+     counter-reset:section 0;
+   }
+   
+   div.body h2:before {
+     content:"";
+     counter-increment:section;
+   }
+
+   div.body h2 {
+     background-color: #ffffff;
+     margin-top: 60px;
+     /* background-color: #8A7DB3; */ 
+     color: #0c3762;
+     border-bottom:
+     dotted thin #CFC8C8;
+     counter-reset:section;
+   }
+ 
+   div.math:before {
+     counter-increment:equation;
+     content:"(" counter(section) "." counter(equation) ")";
+     float:right;
+   }
+
+   
  	
 .. math::
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * pylons.css_t
  * ~~~~~~~~~~~~
  *
@@ -19,6 +19,7 @@ body {
     color: #ffffff;
     margin: 0.5em 0.8em 0 0.8em;
     padding: 0;
+    counter-reset:section 0;
 }
 
 div.documentwrapper {
@@ -208,11 +209,23 @@ div.body h6 {
 }
  
 div.body h1 { border-top: 20px solid white; margin-top: 0; font-size: 300%; font-weight: bold; margin-bottom: 15px; }
-div.body h2 { background-color: #ffffff; margin-top: 60px; /* background-color: #8A7DB3; */ color: #0c3762; border-bottom: dotted thin #CFC8C8;}
+div.body h2 { background-color: #ffffff; margin-top: 60px; /* background-color: #8A7DB3; */ color: #0c3762; border-bottom: dotted thin #CFC8C8;counter-reset:section;}
 div.body h3 { font-size: 120%; background-color: #ffffff; color: {{ theme_color }}; margin-top: 40px; }
 div.body h4 { font-size: 110%; background-color: #ffffff; }
 div.body h5 { font-size: 100%; background-color: #ffffff; }
 div.body h6 { font-size: 100%; background-color: #ffffff; }
+
+div.body h2:before {
+   content:"";
+   counter-increment:section;
+}
+
+/*对数学公式*/ 
+div.math:before {
+   counter-increment:equation;
+   content:"(" counter(section) "." counter(equation) ")";
+   float:right;
+} 
  
 a.headerlink {
     color: #EDEDE5;
