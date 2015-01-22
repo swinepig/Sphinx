@@ -98,7 +98,7 @@ MathJax开发文档:
 	
 利用 ``CSS`` 计数器为非内联公式加入编号。以下为修改 ``CSS`` 样式:
 
-::
+.. code-block:: css
 
    body {
      counter-reset:section 0;
@@ -128,18 +128,7 @@ MathJax开发文档:
 .. code-block:: ruby
 
    Some Ruby code.
-   
-.. code-block:: css
-
-   div.body h2 {
-     background-color: #ffffff;
-     margin-top: 60px;
-     /* background-color: #8A7DB3; */ 
-     color: #0c3762;
-     border-bottom:
-     dotted thin #CFC8C8;
-     counter-reset:section;
-   } 
+    
  	
 .. math::
 
