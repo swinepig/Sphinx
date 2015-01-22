@@ -89,7 +89,11 @@ True   True   True
    
 数学
 ----
+MathJax开发文档:
 
+ * `中文 <https://mathjax-chinese-doc.readthedocs.org/en/latest/>`_
+ * `PDF <https://media.readthedocs.org/pdf/mathjax/v2.2-latest/mathjax.pdf/>`_
+ 	
 .. math::
 
    (a + b)^2 = a^2 + 2ab + b^2
@@ -114,7 +118,13 @@ True   True   True
 .. math:: e^{i\pi} + 1 = 0
    :label: euler
           
+Euler's identity, equation :eq:`euler`, was elected one of the most
+beautiful mathematical formulas.
 
+.. math::
+
+   \(\iint\limits_{{D_1}} {(\frac{{\partial Q}}{{\partial x}} - \frac{{\partial P}}{{\partial y}})}dxdy = \oint_{AB} {Pdx + Qdy} \) 
+   
 .. rubric:: Footnotes
 
 .. [#] 第一条尾注的文本.
