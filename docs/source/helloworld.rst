@@ -93,6 +93,8 @@ MathJax开发文档:
 
  * `中文 <https://mathjax-chinese-doc.readthedocs.org/en/latest/>`_
  * `PDF <https://media.readthedocs.org/pdf/mathjax/v2.2-latest/mathjax.pdf/>`_
+ 
+`LaTeX在线编辑器 <http://zh.numberempire.com/texequationeditor/equationeditor.php/>`_
  	
 .. math::
 
@@ -123,7 +125,7 @@ beautiful mathematical formulas.
 
 .. math::
 
-   \(\iint\limits_{{D_1}} {(\frac{{\partial Q}}{{\partial x}} - \frac{{\partial P}}{{\partial y}})}dxdy = \oint_{AB} {Pdx + Qdy} \) 
+   \iint\limits_{{D_1}} {(\frac{{\partial Q}}{{\partial x}} - \frac{{\partial P}}{{\partial y}})}dxdy = \oint_{AB} {Pdx + Qdy} 
    
 .. rubric:: Footnotes
 
