@@ -14,7 +14,7 @@
 /* -- page layout ----------------------------------------------------------- */
  
 body {
-    font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+    font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: #ffffff;
     margin: 0.5em 0.8em 0 0.8em;
@@ -125,7 +125,7 @@ div.sphinxsidebarwrapper{
  
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+    font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     color: #868383;
     font-size: 24px;
     font-weight: normal;
@@ -202,7 +202,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+    font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     font-weight: normal;
     color: #373839;
@@ -250,6 +250,10 @@ div.admonition p.admonition-title + p {
 
 div.highlight{
     background-color: white;
+}
+
+div.admonition{
+    font-family:Consolas;
 }
 
 div.note {
@@ -305,12 +309,13 @@ pre {
     padding: 10px 15px 10px 15px;
     margin-bottom: 15px;
     margin-top: 15px;
+    font-family:Consolas;
 }
  
 tt {
     background-color: #F0F0F0;
     font-size: 0.8em;
-    font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+    font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     font-style:italic;
 }
 
