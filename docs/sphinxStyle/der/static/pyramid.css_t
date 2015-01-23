@@ -303,7 +303,7 @@ p.admonition-title {
 
  
 pre {
-    background-color: #e4ffde;
+    background-color: #F1F1F1;
     border-width: thin;
     border-color: #dcdcdc;
     padding: 10px 15px 10px 15px;
