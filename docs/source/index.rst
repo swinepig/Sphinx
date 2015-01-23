@@ -13,6 +13,7 @@ Contents:
 
    helloworld
    sphinxExtension/index
+   pragram/index
 
 
  
