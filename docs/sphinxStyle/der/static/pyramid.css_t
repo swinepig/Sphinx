@@ -303,13 +303,14 @@ p.admonition-title {
 
  
 pre {
-    background-color: #F1F1F1;
+    background-color: #F8F8F8;
     border-width: thin;
     border-color: #dcdcdc;
     padding: 10px 15px 10px 15px;
     margin-bottom: 15px;
     margin-top: 15px;
     font-family:Consolas;
+    font-size:0.9em;
 }
  
 tt {
