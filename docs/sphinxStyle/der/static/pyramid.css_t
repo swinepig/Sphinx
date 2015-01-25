@@ -204,17 +204,17 @@ div.body h5,
 div.body h6 {
     font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     background-color: #ffffff;
-    font-weight: normal;
+    font-weight: bold;
     color: #373839;
     margin: 30px 0px 10px 0px;
     padding: 5px 0px 5px 0px;
 }
  
 div.body h1 { border-top: 20px solid white; margin-top: 0; font-size: 300%; font-weight: bold; margin-bottom: 25px; text-align: center;}
-div.body h2 { background-color: #ffffff; margin-top: 60px; /* background-color: #8A7DB3; */ color: #0c3762; border-bottom: dotted thin #CFC8C8;counter-reset:equation;}
-div.body h3 { font-size: 120%; background-color: #ffffff; color: {{ theme_color }}; margin-top: 40px; }
-div.body h4 { font-size: 110%; background-color: #ffffff; }
-div.body h5 { font-size: 100%; background-color: #ffffff; }
+div.body h2 { background-color: #ffffff; margin-top: 60px; border-bottom: dotted thin #CFC8C8;counter-reset:equation; text-align: center;}
+div.body h3 { font-size: 120%; background-color: #ffffff; margin-top: 40px; } 
+div.body h4 { font-size: 110%; background-color: #ffffff; margin-top: 40px;}
+div.body h5 { font-size: 100%; background-color: #ffffff; margin-top: 40px;}
 div.body h6 { font-size: 100%; background-color: #ffffff; }
 
 div.body h2:before {
