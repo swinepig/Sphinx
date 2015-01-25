@@ -11,10 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   graduationThesis/index
    part
    sphinxExtension/index
    pragram/index
-   graduationThesis/index
 
 
  
