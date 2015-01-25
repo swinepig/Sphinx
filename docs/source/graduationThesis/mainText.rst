@@ -48,5 +48,13 @@ Fibonacci Numbers And Golden Ratio
 
 **性质l**   Fibonacci数 :math:`F_n` 可以表示为二项式系数之和，即：
 
-     :math:`F_n = \binom{n}{0} + \binom{n-1}{0} + \cdots + \binom{n-k}{0}` ,其中, :math:`k = \left[ \frac{n}{2} \right]`
+     :math:`F_n = \binom{n}{0} + \binom{n-1}{0} + \cdots + \binom{n-k}{0}` ,其中, :math:`k =\left[ \frac{n}{2} \right]`
+
+证明：当 :math:`k >\left[ \frac{n}{2} \right],\text{有} n-k < k,` 即。。所以只需证明下面的等式成立即可：
+
+     :math:`F_n = \binom{n}{0} + \binom{n-1}{0} + \cdots + \binom{n-k}{0} + \cdots + \binom{n}{0}`
+
+下面用归纳法证明：
+
+当n=0时，有 :math:`F_0 = \binom{0}{0} = 1` 成立。假设对 :math:`0,1,2 \cdots ,n` 等式都成立，则有：
 
