@@ -32,4 +32,54 @@ Fibonacci Numbers And Golden Ratio
 
 十三世纪，意大利数学家Fibonacci提出了“兔子问题”：有一个人把一对兔子放在四面围着的地方，想要知道一年后有多少对兔子生出来。假定每个月一对兔子生下另外一对。而这新的一对在二个月后就生下另外一对，问第n个月时共有多少对兔子？
 
-我们以表示第 :math:`U _n` 个月时兔子的总对数，经过简单计算可知， :math:`U _n` 前几项如下：
+我们以 :math:`U _n` 表示第n个月时兔子的总对数，经过简单计算可知， :math:`U _n` 前几项如下：
+
+.. math::
+ 
+   \begin{tabular}{ l c r }
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9 \\
+   \end{tabular}
+   
++------------------------------+
+| paragraph                    |
+|                              |
++------------------------------+
+
++------+-----------------------+
+| "- " | list item             |
++------| (body elements)+      |
+       +-----------------------+
+       
+:Date: 2001-08-16
+:Version: 1
+:Authors: - Me
+          - Myself
+          - I
+:Indentation: Since the field marker may be quite long, the second
+   and subsequent lines of the field body do not have to line up
+   with the first line, but they must be indented relative to the
+   field name marker, and they must line up with each other.
+:Parameter i: integer
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+
+
++--------------+----------+-----------+-----------+
+| row 1, col 1 | column 2 | column 3  | column 4  |
++--------------+----------+-----------+-----------+
+| row 2        |                                  |
++--------------+----------+-----------+-----------+
+| row 3        |          |           |           |
++--------------+----------+-----------+-----------+
