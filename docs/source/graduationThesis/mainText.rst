@@ -67,10 +67,10 @@ Fibonacci Numbers And Golden Ratio
   & = & \binom{n+1}{0} + \binom{n}{1} + \cdots + \binom{1}{n} + \binom{0}{n+1} \\
   \end{eqnarray*}
   
-  
+
      :math: `F_{n+1} & = & F_{n+1} + F_{n-1} \\
-            =  \left[ \binom{n}{0} + \binom{n-1}{1} + \cdots + \binom{0}{n} \right] + \left[ \binom{n-1}{0} + \binom{n-2}{1} + \cdots + \binom{0}{n-1} \right] 
-            =  \binom{n}{0} + \left[ \binom{n-1}{1} + \binom{n-1}{0} \right] + \left[ \binom{0}{n} + \binom{0}{n-1} \right] 
+            =  \left[ \binom{n}{0} + \binom{n-1}{1} + \cdots + \binom{0}{n} \right] + \left[ \binom{n-1}{0} + \binom{n-2}{1} + \cdots + \binom{0}{n-1} \right] \\
+            =  \binom{n}{0} + \left[ \binom{n-1}{1} + \binom{n-1}{0} \right] + \left[ \binom{0}{n} + \binom{0}{n-1} \right] \\
             =  \binom{n+1}{0} + \binom{n}{1} + \cdots + \binom{1}{n} + \binom{0}{n+1}`
 
  
