@@ -42,11 +42,11 @@ Fibonacci Numbers And Golden Ratio
 
 显然，通过以上表格可推出如下一般递推关系式：
 
- :math:`F_0 = 1,F_1 = 1,\cdots,F_n = F_(n-1) + F_(n-2),n \geq 2`
+     :math:`F_0 = 1,F_1 = 1,\cdots,F_n = F_{n-1} + F_{n-2},n \geq 2`
 
 满足以上递归关系的数列被称为Fibonacci数列。
 
-**性质l**  Fibonacci数 :math:`F_n` 可以表示为二项式系数之和，即：
+**性质l**   Fibonacci数 :math:`F_n` 可以表示为二项式系数之和，即：
 
-
+     :math:`F_n = \binom{n}{0} + \binom{n-1}{0} + \cdots + \binom{n-k}{0}` ,其中, :math:`k = \left[ \frac{n}{2} \right]`
 
