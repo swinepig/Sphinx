@@ -11,9 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   helloworld
+   part
    sphinxExtension/index
    pragram/index
+   graduationThesis/index
 
 
  
