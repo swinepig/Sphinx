@@ -66,13 +66,25 @@ Fibonacci Numbers And Golden Ratio
   & = & \binom{n}{0} + \left[ \binom{n-1}{1} + \binom{n-1}{0} \right] + \left[ \binom{0}{n} + \binom{0}{n-1} \right] \\
   & = & \binom{n+1}{0} + \binom{n}{1} + \cdots + \binom{1}{n} + \binom{0}{n+1} \\
   \end{eqnarray*}
-  
-
-     :math: `F_{n+1} & = & F_{n+1} + F_{n-1} \\
-            =  \left[ \binom{n}{0} + \binom{n-1}{1} + \cdots + \binom{0}{n} \right] + \left[ \binom{n-1}{0} + \binom{n-2}{1} + \cdots + \binom{0}{n-1} \right] \\
-            =  \binom{n}{0} + \left[ \binom{n-1}{1} + \binom{n-1}{0} \right] + \left[ \binom{0}{n} + \binom{0}{n-1} \right] \\
-            =  \binom{n+1}{0} + \binom{n}{1} + \cdots + \binom{1}{n} + \binom{0}{n+1}`
-
  
 由归纳法，命题成立。
 
+**性质2**  :math:`F_0 + F_1 + \cdots + F_n =  F_{n+2} - 1`
+
+证明：由递推关系得：
+
+     :math:`F_0 =F_2 - F_1,F_1 =F_3 - F_2, \cdots ,F_n =F_{n+2} - F_{n+1}` 
+     
+把以上各式的左边和右边分别相加，可得：
+
+     :math:`F_0 + F_1 + \cdots + F_n =  F_{n+2} - 1`
+     
+**性质3**  :math:`F_0 + F_1 + \cdots + F_2n =  F_{2n+2}`
+
+证明：由递推关系得：
+
+     :math:`F_0 =F_1,F_2 =F_3 - F_1, \cdots ,F_2n =F_{2n+1} - F_{2n-1}` 
+     
+把以上各式的左边和右边分别相加，得：
+
+     :math:`F_0 + F_2 + \cdots + F_2n =  F_{2n+1}`
