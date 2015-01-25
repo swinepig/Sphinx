@@ -56,5 +56,16 @@ Fibonacci Numbers And Golden Ratio
 
 下面用归纳法证明：
 
-当n=0时，有 :math:`F_0 = \binom{0}{0} = 1` 成立。假设对 :math:`0,1,2 \cdots ,n` 等式都成立，则有：
+当 :math:`n=0` 时，有 :math:`F_0 = \binom{0}{0} = 1` 成立。假设对 :math:`0,1,2 \cdots ,n` 等式都成立，则有:
+
+.. math::
+
+  \begin{eqnarray*}
+  F_{n+1} & = & F_{n+1} + F_{n-1} \\
+  & = & \left[ \binom{n}{0} + \binom{n-1}{1} + \cdots + \binom{0}{n} \right] + \left[ \binom{n-1}{0} + \binom{n-2}{1} + \cdots + \binom{0}{n-1} \right] \\
+  & = & \binom{n}{0} + \left[ \binom{n-1}{1} + \binom{n-1}{0} \right] + \left[ \binom{0}{n} + \binom{0}{n-1} \right] \\
+  & = & \binom{n+1}{0} + \binom{n}{1} + \cdots + \binom{1}{n} + \binom{0}{n+1} \\
+  \end{eqnarray*}
+ 
+由归纳法，命题成立。
 
