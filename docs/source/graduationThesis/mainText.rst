@@ -104,8 +104,8 @@ Fibonacci Numbers And Golden Ratio
 
 我们用一种近似方法——迭代法来确定黄金数W的二次方程式 :math:`f(x) = x^2 + x -1 = 0`
 
-将 :math` x^2 + x -1 = 0` 改写成迭代方程 :math:`x = \frac{1}{1+x},`  易知所求根在区间  :math:`(0,1)` 内，迭代函数 :math`g(x) = \frac{1}{1+x},g^\prime = - \frac{1}{(1+x)^2}` 在区
+将 :math:` x^2 + x -1 = 0` 改写成迭代方程 :math:`x = \frac{1}{1+x},`  易知所求根在区间  :math:`(0,1)` 内，迭代函数 :math:`g(x) = \frac{1}{1+x},g^\prime = - \frac{1}{(1+x)^2}` 在区
 间  :math:`(0,1)` 上恒有 :math:`|g^\prime(x)| < 1` 。因此迭代公式 :math:`x_{n+1} = \frac{1}{1 + x_n}`  对任意初始值  :math:`x_0 \in (0,1)` 均收敛于方程的根 :math:`x^*` 。
 
-取初始值 :math:`x_0 = 1` ，可得  :math`x^*` 的一列近似值。
+取初始值 :math:`x_0 = 1` ，可得  :math:`x^*` 的一列近似值。
 	
