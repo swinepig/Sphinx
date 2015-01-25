@@ -102,7 +102,7 @@ Fibonacci Numbers And Golden Ratio
 
 因为任何无理数都可用有理数逼近。现在我们试图找到一串分数列 :math:`\frac{a_n}{b_n}(n = 1,2,3\cdots)` 使得  :math:`\lim\limits_{x \to \infty} \frac{a_n}{b_n} = W,\text{且} \frac{a_n}{b_n}`  是所有分母小于或等于 的分数中最接近于W的。
 
-我们用一种近似方法——迭代法来确定黄金数W的二次方程式 :math`f(x) = x^2 + x -1 = 0`
+我们用一种近似方法——迭代法来确定黄金数W的二次方程式 :math:`f(x) = x^2 + x -1 = 0`
 
 将 :math` x^2 + x -1 = 0` 改写成迭代方程 :math:`x = \frac{1}{1+x},`  易知所求根在区间  :math:`(0,1)` 内，迭代函数 :math`g(x) = \frac{1}{1+x},g^\prime = - \frac{1}{(1+x)^2}` 在区
 间  :math:`(0,1)` 上恒有 :math:`|g^\prime(x)| < 1` 。因此迭代公式 :math:`x_{n+1} = \frac{1}{1 + x_n}`  对任意初始值  :math:`x_0 \in (0,1)` 均收敛于方程的根 :math:`x^*` 。
