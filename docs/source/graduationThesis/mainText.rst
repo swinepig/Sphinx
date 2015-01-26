@@ -152,10 +152,15 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 接着，从熟悉的数列入手寻找符合 :math:`(3.2)` 式的数列．先考察等差数列 :math:`a_n = kn + b.` 代入 :math:`(3.2)` 式，有 :math:`k(n+2) + b = k(n+1) + b + kn + b,` 即  :math:`a_n = kn + b,` 由 :math:`n` 的任意性
 得知  :math:`k = b = 0,` 即 :math:`a_n = 0,` 但它不符合初始条件  :math:`u_0 = 1,u_1 = 1` ，故所有等差数列均不符合。
 
-再来考察等比数列 :math:`a_n = a_1 q^{n-1}` (其中 :math:`a_1,q` 均为不等于零的常数)。代入 :math:`(3.2)` 式，得  :math:`a_1 q^{n+1} = a_1 q^n + a_1 q^{n-1},` 即 :math:`q^2 - q -1 =0,` 解得  :math:`q = \frac{1 - \sqrt{5]}{2}.`  为方便起见，记  :math:`a = \frac{1+\sqrt{5}}{2},b = \frac{{1-\sqrt{5}}{2}` (以下同)．这样等比数列 :math:`a_n = a_1 a^{n-1} \text{与} b_n = b_1 b^{n-1}` 符合 :math:`(3.2)` 式。
+再来考察等比数列 :math:`a_n = a_1 q^{n-1}` (其中 :math:`a_1,q` 均为不等于零的常数)。代入 :math:`(3.2)` 式，得  :math:`a_1 q^{n+1} = a_1 q^n + a_1 q^{n-1},` 即 :math:`q^2 - q -1 =0,` 解得  :math:`q = \frac{1-\sqrt{5}}{2}.`  为方便起见，记  :math:`a = \frac{1+\sqrt{5}}{2},b = \frac{1-\sqrt{5}}{2}` (以下同)．这样等比数列 :math:`a_n = a_1 a^{n-1} \text{与} b_n = b_1 b^{n-1}` 符合 :math:`(3.2)` 式。
 	
 最后，兼顾初始条件  :math:`u_0 = 1,u_1 = 1, u_n` 必须要有两个自由待定的常数，故可设  :math:`u_n = a_n + b_n = a_1 a^{n-1} + b_1 b^{n-1}` 将 :math:`u_0 = 1,u_1 = 1` 代入,求出  :math:`a_1,b_1` 便可得Fibonacci数列的Binet公式:
  .. math:: u_n = \frac{1}{\sqrt{5}} \left[(\frac{1+\sqrt{5}}{2})^{n+1} + (\frac{1-\sqrt{5}}{2})^{n-1} \right]
  
+
 1.4.2 Fibonacci数列矩阵表达式的发现与推导
-"""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+
+对:math:`(3.2),` 式 :math:`u_{n+2} = u_{n+1} + u_n` 进行整体考虑．如果把  :math:`u_{n+2},u_{n+1};u_{n+1},u_n,` 每两项看成一个量，则它们不但是相邻的，而且在此又包含了递推式 :math:`u_{n+2} = u_{n+1} + u_n` 中的三项．由此想到，把相邻的两项看作一个二元
+列向量  :math:`\binom{u_{n+2}}{u_{n+1}} \text{与} \binom{u_{n+1}}{u_n}.` 这时，问题的关键在于寻找 :math:`\binom{u_{n+2}}{u_{n+1}} \text{与} \binom{u_{n+1}}{u_n}` 的递推关系。受矩阵乘
+法  :math:`\left( \begin{array}{ccc} a & b & c \\ d & e & f \\ g & h & i \end{array} \right)\`
