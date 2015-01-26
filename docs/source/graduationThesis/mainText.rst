@@ -295,24 +295,23 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 :math:`3) \text{若} \Delta = \lambda^2 + 4\mu < 0,` 与情形 :math:`3)` 类似，:math:`(5.3)` 式有两个共轭的复数根 :math:`\rho \text{和} \bar{\rho}` 
 而 :math:`F_n = \frac{\begin{vmatrix} \rho & (\lambda-\rho)^{n-2}(F_2-\rho F_1)\\ \bar{\rho} & (\lambda-\bar{\rho})^{n-2}(F_2- \bar{\rho} F_1)\end{vmatrix}}{\begin{vmatrix} \rho & 1\\ \bar{\rho} & 1\end{vmatrix}}` 由
 于 :math:`\rho + \bar{\rho} = \lambda,\rho \bar{\rho} = - \mu,` 故
-  :marh:`F_n = \frac{\rho^{n-1}(F_2-\bar{\rho}F_1) - \bar{\rho}^{n-1}(F_2 - \rho F_1)}}{\rho - \bar{\rho}} = \frac{(\rho^{n-1} - \bar{\rho}^{n-1})F_2 + \mu(\rho^{n-2} - \bar{\rho}^{n-2})F_1}{\rho - \bar{\rho}}` 若
+  :marh:`F_n = \frac{\rho^{n-1}(F_2-\bar{\rho}F_1) - \bar{\rho}^{n-1}(F_2 - \rho F_1)}{\rho - \bar{\rho}} = \frac{(\rho^{n-1} - \bar{\rho}^{n-1})F_2 + \mu(\rho^{n-2} - \bar{\rho}^{n-2})F_1}{\rho - \bar{\rho}}` 若
 令  :math:`\rho = r(\cos \theta + \sin \theta),\text{则} \bar{\rho} = (\cos \theta - i\sin \theta),` 代入 :math:`F_n` 的表达式得
 
 .. math:: F_n = \frac{r^{n-1} \sin(n-1)\theta F_2 + \mu r^{n-3} \sin(n-2) \theta F_1}{\sin \theta}
 
 在数值计算的三次样条插值口 [15]_ 以及用差分方法解常微分方程边值问题时，要处理对角方程组，其系数可构成一个 :math:`n` 阶三对角行列式
-:math:`D_n = \begin{equation}
-\left
-\begin{array}{cccccc}
-a & b &  &  &  & & \\
-c & a & b &  &  &  \\
-& c & a & b &  &  \\
-&  & \ddots & \ddots &  &  \\
-&  &  & c & a & b \\
-& &  &  &  & c & a \\
-\end{array}
-\right)
-\end{equation}`
+:math:`D_n =\begin{vmatrix} a & b &  &  & & \\ c & a & b &  & & \\  & c & a & b & & \\  &  & \ddots & \ddots & & \\  &  &  & c & a & b \\ &  &  &  & c & a \end{vmatrix}` 将 :math:`D_n` 按第一行展开( 或按第一列展开 ) 后得
+
+.. math:: D_n = aD_{n-1} - bcD_{n-2}
+
+其中, :math:`D_1 = a; D_2 = \begin{vmatrix} a & b \\ c & a \end{vmatrix} = a^2 - bc`
+
+显然 :math:`(5.11)` 式符合 :math:`(5.1)` 的形式，因此可以按上述方法得到 :math:`D_n` 的通项公式来进行计算。这也是Fibonacci数列推广形式的一种应用．  
+
+
+4 Fibonacci数列和黄金分割比的MATLAB的实现
+-----------------------------------------
 
 
 5 参考文献
