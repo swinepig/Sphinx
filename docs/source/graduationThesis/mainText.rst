@@ -161,29 +161,32 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 1.4.2 Fibonacci数列矩阵表达式的发现与推导
 """"""""""""""""""""""""""""""""""""""""
 
-对:math:`(3.2),` 式 :math:`u_{n+2} = u_{n+1} + u_n` 进行整体考虑．如果把  :math:`u_{n+2},u_{n+1};u_{n+1},u_n,` 每两项看成一个量，则它们不但是相邻的，而且在此又包含了递推式 :math:`u_{n+2} = u_{n+1} + u_n` 中的三项．由此想到，把相邻的两项看作一个二元
+对  :math:`(3.2),` 式 :math:`u_{n+2} = u_{n+1} + u_n` 进行整体考虑．如果把  :math:`u_{n+2},u_{n+1};u_{n+1},u_n,` 每两项看成一个量，则它们不但是相邻的，而且在此又包含了递推式 :math:`u_{n+2} = u_{n+1} + u_n` 中的三项．由此想到，把相邻的两项看作一个二元
 列向量  :math:`\binom{u_{n+2}}{u_{n+1}} \text{与} \binom{u_{n+1}}{u_n}.` 这时，问题的关键在于寻找 :math:`\binom{u_{n+2}}{u_{n+1}}`  与 :math:`\binom{u_{n+1}}{u_n}` 的递推关系。受矩阵乘
 法  :math:`\begin{pmatrix} a & b\\ c & d \end{pmatrix} \begin{pmatrix} x\\ y \end{pmatrix} = \begin{pmatrix} ax + by\\ cx+dy \end{pmatrix}` 的启发，
 :math:`\begin{equation}
 \left(
 \begin{array}{cccccc}
-0 & 1 &  &  &  & \text{\Huge0} \\
+0 & 1 &  &  &  & & \\
 1 & 0 & 1 &  &  &  \\
 & 1 & \ddots & \ddots &  &  \\
 &  & \ddots & \ddots & \ddots &  \\
 &  &  & \ddots & \ddots & 1 \\
-\text{\Huge0} &  &  &  & 1 & 0 \\
+& &  &  &  & 1 & 0 \\
 \end{array}
 \right)
 \end{equation}`
-:math:`\begin{pmatrix} u_{n+2}\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} u_{n+2} + u_n\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} 1 \times u_{n+1} + 1 \times u_n\\ 1 \times u_{n+1} + 0 \times u_n \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix} \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix}` 所以
+:math:`\begin{pmatrix} u_{n+2}\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} u_{n+2} + u_n\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} 1 \times u_{n+1} + 1 \times u_n\\ 1 \times u_{n+1} + 0 \times u_n \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix} \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix}`
 
-.. math::
+所以 .. math::
 
    \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
    
 这就是Fibonacci数列的矩阵表达式．
-   
 
+通过  :math:`(3.2)` 式，要求出  :math:`{u_n}` 的通项表达式，关键在 :math:`\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n` 关于n的表达式，为此利用哈密尔顿定理：若  :math:`f(\lambda)` 是K阶方阵A的特征方程，则 :math:`f(A)=0` (0为K阶零方阵)．
+
+考察  :math:`A=\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix},`  它的特征方程 :math:`f(\lambda)=|\lambda I - A| = \begin{vmatrix} \lambda-1 & -1\\ -1 & \lambda\end{vmatrix} = \lambda^2 - \lambda -1 = 0,` 其跟为 :math:`a = \frac{\sqrt{5} + 1}{2},b = \frac{\sqrt{5} + 1}{2}.`
+则 :math:`f(A) = A^2 - A - I = 0`  (0和I分别为2阶零矩阵与单位矩阵)。
 
 
