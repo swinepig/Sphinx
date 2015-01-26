@@ -167,12 +167,23 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 :math:`\begin{equation}
 \left(
 \begin{array}{cccccc}
-0 & 1 &  &  &  & \text{\Huge$0$} \\
+0 & 1 &  &  &  & \text{\Huge0} \\
 1 & 0 & 1 &  &  &  \\
 & 1 & \ddots & \ddots &  &  \\
 &  & \ddots & \ddots & \ddots &  \\
 &  &  & \ddots & \ddots & 1 \\
-\text{\Huge$0$} &  &  &  & 1 & 0 \\
+\text{\Huge0} &  &  &  & 1 & 0 \\
 \end{array}
 \right)
 \end{equation}`
+:math:`\begin{pmatrix} u_{n+2}\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} u_{n+2} + u_n\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} 1 \times u_{n+1} + 1 \times u_n\\ 1 \times u_{n+1} + 0 \times u_n \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix} \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix}` 所以
+
+.. math::
+
+   \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
+   
+这就是Fibonacci数列的矩阵表达式．
+   
+
+
+
