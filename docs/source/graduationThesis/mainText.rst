@@ -79,15 +79,15 @@ Fibonacci Numbers And Golden Ratio
 
      :math:`F_0 + F_1 + \cdots + F_n =  F_{n+2} - 1`
      
-**性质3**  :math:`F_0 + F_1 + \cdots + F_2n =  F_{2n+2}`
+**性质3**  :math:`F_0 + F_1 + \cdots + F_{2n} =  F_{2n+2}`
 
 证明：由递推关系得：
 
-     :math:`F_0 =F_1,F_2 =F_3 - F_1, \cdots ,F_2n =F_{2n+1} - F_{2n-1}` 
+     :math:`F_0 =F_1,F_2 =F_3 - F_1, \cdots ,F_{2n} =F_{2n+1} - F_{2n-1}` 
      
 把以上各式的左边和右边分别相加，得：
 
-     :math:`F_0 + F_2 + \cdots + F_2n =  F_{2n+1}`
+     :math:`F_0 + F_2 + \cdots + F_{2n} =  F_{2n+1}`
      
      
 1.2 黄金分割
@@ -148,3 +148,14 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 对于等式 :math:`(3.2),` 常常可以从它的一些变式入手，来发现它的结构特征．
   
 注意到 :math:`(3.2)` 是线性关系式，对于满足  :math:`(3.2)` 的任意两个数列 :math:`{a_n}、{b_n},` 以及任意常数a,b，因  :math:`a \cdot a_{n+2} + b \cdot b_{n+2} = a(a_{n+1} + a_n) + b(b_{n+1} + b_n) = ( a \cdot a_{n+1} + b \cdot b_{n+1}) + ( a \cdot a_n + b \cdot b_n),` 所以数列也满足  :math:`(3.2)` 式．这说明，从数学结构来看，所有符合  :math:`(3.2)` 式的数列的集合构成一个加群．
+
+接着，从熟悉的数列入手寻找符合 :math:`(3.2)` 式的数列．先考察等差数列 :math:`a_n = kn + b.` 代入 :math:`(3.2)` 式，有 :math:`k(n+2) + b = k(n+1) + b + kn + b,` 即  :math:`a_n = kn + b,` 由 :math:`n` 的任意性
+得知  :math:`k = b = 0,` 即 :math:`a_n = 0,` 但它不符合初始条件  :math:`u_0 = 1,u_1 = 1` ，故所有等差数列均不符合。
+
+再来考察等比数列 :math:`a_n = a_1 q^{n-1}` (其中 :math:`a_1,q` 均为不等于零的常数)。代入 :math:`(3.2)` 式，得  :math:`a_1 q^{n+1} = a_1 q^n + a_1 q^{n-1},` 即 :math:`q^2 - q -1 =0,` 解得  :math:`q = \frac{1 - \sqrt{5]}{2}.`  为方便起见，记  :math:`a = \frac{1+\sqrt{5}}{2},b = \frac{{1-\sqrt{5}}{2}` (以下同)．这样等比数列 :math:`a_n = a_1 a^{n-1} \text{与} b_n = b_1 b^{n-1}` 符合 :math:`(3.2)` 式。
+	
+最后，兼顾初始条件  :math:`u_0 = 1,u_1 = 1, u_n` 必须要有两个自由待定的常数，故可设  :math:`u_n = a_n + b_n = a_1 a^{n-1} + b_1 b^{n-1}` 将 :math:`u_0 = 1,u_1 = 1` 代入,求出  :math:`a_1,b_1` 便可得Fibonacci数列的Binet公式:
+ .. math:: u_n = \frac{1}{\sqrt{5}} \left[(\frac{1+\sqrt{5}}{2})^{n+1} + (\frac{1-\sqrt{5}}{2})^{n-1} \right]
+ 
+1.4.2 Fibonacci数列矩阵表达式的发现与推导
+"""""""""""""""""""""""""""""""""""""""""
