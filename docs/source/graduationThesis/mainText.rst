@@ -163,11 +163,4 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 
 对:math:`(3.2),` 式 :math:`u_{n+2} = u_{n+1} + u_n` 进行整体考虑．如果把  :math:`u_{n+2},u_{n+1};u_{n+1},u_n,` 每两项看成一个量，则它们不但是相邻的，而且在此又包含了递推式 :math:`u_{n+2} = u_{n+1} + u_n` 中的三项．由此想到，把相邻的两项看作一个二元
 列向量  :math:`\binom{u_{n+2}}{u_{n+1}} \text{与} \binom{u_{n+1}}{u_n}.` 这时，问题的关键在于寻找 :math:`\binom{u_{n+2}}{u_{n+1}}`  与 :math:`\binom{u_{n+1}}{u_n}` 的递推关系。受矩阵乘
-法   :math:`\left( \begin{array}{ccc} a & b & c \\ d & e & f \\ g & h & i \end{array} \right)`
-
-.. math::
-
-  \left( \begin{array}{ccc}
-  a & b & c \\
-  d & e & f \\
-  g & h & i \end{array} \right)
+法   :math:`\left( \begin{array}{ccc} a & b & c \\ d & e & f \\ g & h & i \end{array} \right)`  :math:`\begin{pmatrix} a & b\\ c & d \end{pmatrix} \begin{pmatrix} x\\ y \end{pmatrix} = \begin{pmatrix} ax + by\\ cx+dy \end{pmatrix}` 的启发，
