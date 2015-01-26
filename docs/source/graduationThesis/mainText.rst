@@ -191,8 +191,8 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 
 设  :math:`\lambda^2 = g(\lambda)(\lambda^2 - \lambda - 1) + p\lambda + q,\text{则} A^n = pA + qI,` 把  :math:`a,b` 代入上式，得  :math:`a^n = pa +q,b^n = pb +q,` 解得  :math:`p = \frac{a^n - b^n}{a-b},q = \frac{ab^n - ba^n}{a-b},`
 :math:`A^n = pA + qI = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix} + \frac{ab^n-ba^n}{a-b} \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix} = \begin{pmatrix} \frac{ab^{n+1}-b^{n+1}}{a-b} & \frac{a^n-b^n}{a-b} \\ \frac{a^n-b^n}{a-b} & \frac{ab^n-ba^n}{a-b} \end{pmatrix}`  所以
-:math:`\begin{pmatrix} u_{n+1}\\ u_n\end{pmatrix} =  \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n  \begin{pmatrix} 1\\ 1\end{pmatrix} = \begin{pmatrix} \frac{ab^{n+1}-b^{n+1}}{a-b} & \frac{a^n-b^n}{a-b} \\ \frac{a^n-b^n}{a-b} & \frac{ab^n-ba^n}{a-b} \end{pmatrix} \begin{pmatrix} 1\\ 1\end{pmatrix} = \begin{pmatrix} \frac{a^{n+2}-b^{n+2}}{a-b} \\ \frac{a^{n+1}-b^{n+1}}{a-b} \end{pmatrix}` 由此
-可得, :math:`u_n = \frac{a^{n+1} - b^{n+1}}{a-b} = \frac{1}{\sqrt{5}} \left[(\frac{1+\sqrt{5}}{2})^{n+1} + (\frac{1-\sqrt{5}}{2})^{n-1} \right]`
+:math:`\begin{pmatrix} u_{n+1}\\ u_n\end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1\end{pmatrix} = \begin{pmatrix} \frac{ab^{n+1}-b^{n+1}}{a-b} & \frac{a^n-b^n}{a-b} \\ \frac{a^n-b^n}{a-b} & \frac{ab^n-ba^n}{a-b} \end{pmatrix} \begin{pmatrix} 1\\ 1\end{pmatrix} =\begin{pmatrix} \frac{a^{n+2}-b^{n+2}}{a-b} \\ \frac{a^{n+1}-b^{n+1}}{a-b} \end{pmatrix}` 由此
+可得, :math:`u_n = \frac{a^{n+1} - b^{n+1}}{a-b} = \frac{1}{\sqrt{5}} \biggl[(\frac{1+\sqrt{5}}{2})^{n+1} + (\frac{1-\sqrt{5}}{2})^{n-1} \biggl]`
 
 2	Fibonacci数列的研究现状与应用
 -------------------------------
@@ -222,7 +222,7 @@ Shai在((Suppose more rabbits arebom》一文中，将古典的Fibonacci数列�
   
 这时两个试验点放在 :math:`F_{n-1}` 和  :math:`F_{n-2}` 两个分点上，如果  :math:`F_{n-1}` 分点比较好，则舍去小于  :math:`F_{n-1}` 的部分；如果  :math:`F_{n-2}` 点更好，则舍去大于  :math:`F_{n-1}` 的部分。在留下的部分共  :math:`F_{n-1}` 个分点，其中第  :math:`F_{n-2}` 和  :math:`F_{n-3}` 第二试验点，恰好有一个是刚才留下来的试验可以利用。
 
-  可见在 :math:`E` 个可能试验中，最多用疗  :math:`n-1` 次试验便可得到所求的极值点。
+可见在 :math:`E` 个可能试验中，最多用疗  :math:`n-1` 次试验便可得到所求的极值点。
   
 :math:`(b)` 利用Fibonacci数列进行优选不同于0.618法之点，还在于它适合于参数只能取整数数值的情况。如若可能试验的数目比  :math:`F_n` 小，但比  :math:`F_{n-1}` 大时，可以虚加几个点凑成 :math:`F_n` 个点，但新增加的点的试验不必真做，可认定比其他点都差的点来处理。
 
@@ -254,7 +254,24 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 :math:`(5.3)` 式是关于  :math:`\rho` 的一元二次方程，现在对  :math:`(5.3)` 的判别式进行讨论．
 
 :math:`1) \text{若} \Delta = \lambda^2 + 4\mu > 0,` 则 :math:`(5.3)` 式有相异的两实根 :math:`\rho_{1,2} = \frac{1}{2}(\lambda \pm \sqrt{\lambda^2+4\mu}),` 将 :math:`\rho_1` 代入 :math:`(5.2)` 得
-:math:`F_n - \rho_1 F_{n-1} =(\lambda - \rho_1)(F_{n-1} - \rho F_{n-2})`  类似的有
+  :math:`F_n - \rho_1 F_{n-1} =(\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2})`  类似的有
+  :math:`(\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2}) = (\lambda - \rho_1)^2(F_{n-2} - \rho_1 F_{n-3})`
+  :math:`\cdots \cdots`
+  :math:`(\lambda - \rho_1)^{n-3}(F_3 - \rho_1 F_2) = (\lambda - \rho_1)^{n-2}(F_2 - \rho_1 F_1)`
+  
+将上面的  :math:`n-2` 个式子相加，消去等号两端相同的项可得
+
+.. math:: F_n - \rho_1 F_{n-1} =(\lambda - \rho_1)^{n-2}(F_2 - \rho_1 F_1)
+
+同理
+
+.. math:: F_n - \rho_2 F_{n-1} =(\lambda - \rho_2)^{n-2}(F_2 - \rho_2 F_1)
+
+联立  :math:`(5.4) \quad (5.5)` 式，应用克莱姆法则，就得到 :math:`F_n` 的表达式
+:math:`F_n = \frac{\begin{vmatrix} \rho_1 & (\lambda-\rho_1)^{n-2}(F_2-\rho_1 F_1)\\ \rho_2 & (\lambda-\rho_2)^{n-2}(F_2-\rho_2 F_1)\end{vmatrix}}{\begin{vmatrix} \rho_1 & 1\\ \rho_2 & 1\end{vmatrix}}` 由
+于  :math:`\rho_1 + \rho_2 = \lambda,\rho_1\rho_2 = -\mu,` 故
+
+.. math:: F_n = \frac{(\rho_1^{n-1} - \rho_2^{n-1} )F_2 + \mu(\rho_1^{n-2} - \rho_2^{n-2)F_1}{\rho_1 -\rho_2}
 
 
 5 参考文献
