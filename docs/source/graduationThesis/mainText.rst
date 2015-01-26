@@ -178,15 +178,17 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 \end{equation}`
 :math:`\begin{pmatrix} u_{n+2}\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} u_{n+2} + u_n\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} 1 \times u_{n+1} + 1 \times u_n\\ 1 \times u_{n+1} + 0 \times u_n \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix} \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix}`
 
-所以 .. math::
+所以  .. math::
 
-   \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
+        \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
    
 这就是Fibonacci数列的矩阵表达式．
 
 通过  :math:`(3.2)` 式，要求出  :math:`{u_n}` 的通项表达式，关键在 :math:`\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n` 关于n的表达式，为此利用哈密尔顿定理：若  :math:`f(\lambda)` 是K阶方阵A的特征方程，则 :math:`f(A)=0` (0为K阶零方阵)．
 
 考察  :math:`A=\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix},`  它的特征方程 :math:`f(\lambda)=|\lambda I - A| = \begin{vmatrix} \lambda-1 & -1\\ -1 & \lambda\end{vmatrix} = \lambda^2 - \lambda -1 = 0,` 其跟为 :math:`a = \frac{\sqrt{5} + 1}{2},b = \frac{\sqrt{5} + 1}{2}.`
-则 :math:`f(A) = A^2 - A - I = 0`  (0和I分别为2阶零矩阵与单位矩阵)。
+则 :math:`f(A) = A^2 - A - I = 0 \text{(0和I分别为2阶零矩阵与单位矩阵)。}`
+
+设  :math:`\lambda^2 = g(\lambda)(\lambda^2 - \lambda - 1) + p\lambda + q,\text{则} A^n = pA + qI,` 把  :math:`a,b` 代入上式，得  :math:`a^n = pa +q,b^n = pb +q,` 解得  :math:`p = \frac{a^n - b^n}{a-b},q = \frac{ab^n - ba^n}{a-b},`
 
 
