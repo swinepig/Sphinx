@@ -178,17 +178,54 @@ n      :math:`x_n`                n      :math:`x_n`                  n       :m
 \end{equation}`
 :math:`\begin{pmatrix} u_{n+2}\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} u_{n+2} + u_n\\ u_{n+1} \end{pmatrix} = \begin{pmatrix} 1 \times u_{n+1} + 1 \times u_n\\ 1 \times u_{n+1} + 0 \times u_n \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix} \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix}`
 
-所以  .. math::
+.. math::
 
-        \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
+   \begin{pmatrix} u_{n+1}\\ u_n \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} u_1\\ u_0 \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n \begin{pmatrix} 1\\ 1 \end{pmatrix}
    
 这就是Fibonacci数列的矩阵表达式．
 
-通过  :math:`(3.2)` 式，要求出  :math:`{u_n}` 的通项表达式，关键在 :math:`\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n` 关于n的表达式，为此利用哈密尔顿定理：若  :math:`f(\lambda)` 是K阶方阵A的特征方程，则 :math:`f(A)=0` (0为K阶零方阵)．
+通过  :math:`(3.4)` 式，要求出  :math:`{u_n}` 的通项表达式，关键在 :math:`\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n` 关于n的表达式，为此利用哈密尔顿定理：若  :math:`f(\lambda)` 是K阶方阵A的特征方程，则 :math:`f(A)=0` (0为K阶零方阵)．
 
 考察  :math:`A=\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix},`  它的特征方程 :math:`f(\lambda)=|\lambda I - A| = \begin{vmatrix} \lambda-1 & -1\\ -1 & \lambda\end{vmatrix} = \lambda^2 - \lambda -1 = 0,` 其跟为 :math:`a = \frac{\sqrt{5} + 1}{2},b = \frac{\sqrt{5} + 1}{2}.`
 则 :math:`f(A) = A^2 - A - I = 0 \text{(0和I分别为2阶零矩阵与单位矩阵)。}`
 
 设  :math:`\lambda^2 = g(\lambda)(\lambda^2 - \lambda - 1) + p\lambda + q,\text{则} A^n = pA + qI,` 把  :math:`a,b` 代入上式，得  :math:`a^n = pa +q,b^n = pb +q,` 解得  :math:`p = \frac{a^n - b^n}{a-b},q = \frac{ab^n - ba^n}{a-b},`
+:math:`A^n = pA + qI = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix} + \frac{ab^n-ba^n}{a-b} \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix} = \begin{pmatrix} \frac{ab^{n+1}-b^{n+1}}{a-b} & \frac{a^n-b^n}{a-b}} \\ \frac{a^n-b^n}{a-b} & \frac{ab^n-ba^n}{a-b} \end{pmatrix}` 所以
+:math:`\begin{pmatrix} u_{n+1}\\ u_n\end{pmatrix} =  \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}^n  \begin{pmatrix} 1\\ 1\end{pmatrix} = \begin{pmatrix} \frac{ab^{n+1}-b^{n+1}}{a-b} & \frac{a^n-b^n}{a-b}} \\ \frac{a^n-b^n}{a-b} & \frac{ab^n-ba^n}{a-b} \end{pmatrix} \begin{pmatrix} 1\\ 1\end{pmatrix} = \begin{pmatrix} \frac{a^{n+2}-b^{n+2}}{a-b} \\ \frac{a^{n+1}-b^{n+1}}{a-b} \end{pmatrix}` 由此
+可得, :math:`u_n = \frac{a^{n+1} - b^{n+1}}{a-b} = \frac{1}{\sqrt{5}} \left[(\frac{1+\sqrt{5}}{2})^{n+1} + (\frac{1-\sqrt{5}}{2})^{n-1} \right]`
+
+2	Fibonacci数列的研究现状与应用
+-------------------------------
+
+2.1 Fibonacci数列的研究现状
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+对于Fibonacci数的研究已经不再仅仅局限在针对上述序列的性质进行研究，而是已经扩展到研究广义Fibonacci序列、Fibonacci多项式、Fibonacci行列式、Fibonacci三角形等等。并将之应用于数论、代数、组合与图论、计算机科学等数学分支，乃至生物学、物理学等各个方面。
+
+赵秀梅、赵宗昌对Fibonacei数列的应用进行了研究 [10]_ ，并介绍了经典递推关系—Fibonacci数列的问题的由来、数列描述以及Fibonacci数列关系的各种求解方法，并以难易程度不同的实例为基础，详细分析了Fibonacci数列在具体问题中的应用。同时从算法复杂度的角度出发，重点阐述了在编程求解的过程中灵活、恰当地运用Fibonacci数列关系在提高程序执行效率、编码效率方面的重要性，突出了Fibonacci数列关系的研究价值、应用价值以及应用技巧。
+
+1994年陈计先生对Fibonacci三角形介绍了如下猜想 [12]_ :不存在第 :math:`\prod` 型的Fibonacci三角形，即当 :math:`1 \leg k \leg n` 时,不存在以  :math:`F_{n-k},F_n,F_n` 为边长的Fibonacci三角形。(注: :math:`F_n`  是Fibonaeci数，满足关系式： :math:`F_0=0,F_1=1,F_{n+1} = F_n + F_{n-1},n = 1,2 \dotsc ;` 边长为Fibonacci数，面积为整数的三角形称为Fibonacci三角形。)
+
+Shai在((Suppose more rabbits arebom》一文中，将古典的Fibonacci数列进行推广 [3]_ ，一对幼兔经过一个月成为成兔，每对成兔每个月生q对幼兔。即对成兔每月所生的幼兔的对数进行推广。这个结果将是一个非常有趣的数列。利用图1说明每月所生幼兔对数为q=2每月兔子对数情况。称此数列为“Beta-nacci”数列，它记录了每月新生幼兔的对数与前期所有兔子对数的和。即得相邻项兔子对数的数值关系式为 :math:`B_n = B_{n-1} + 2B_{n-2}`
 
 
+5 参考文献
+----------
+
+.. rubric:: Footnotes
+
+.. [1] A. Brousseau (1969). "Fibonacci Statistics in Conifers"[J]. Fibonacci Quarterly (7): 	525–532 
+.. [2] Sigler Laurence E. (trans.) (2002). Fibonacci's Liber Abaci.[M]Springer-Verlag.ISBN  	0-387-95419-8. Chapter II.12, pp. 404–405. 
+.. [3] Shari Lynn．Suppose more rabbits are born，Submitted November 1 986． 
+.. [4] Dov Jarden．On the periodicity of the last．digits of the fibonacci numbers．The 	Fibonacci quarterly。l 963：2l-22．
+.. [5] Doczi, György (2005) [1981]. The Power of Limits: Proportional Harmonies in Nature, 	Art, and Architecture. [M]Boston: Shambhala Publications. ISBN 1-59030-259-1.
+.. [6] 吴振奎.Fibonacci数列.沈阳[M].辽宁教育出版社,1987. 
+.. [7] 黄忠欲.Fibonacci数列表达式发现探索.[J].温州师范大学学院报.2004,25(2)
+.. [8] 宋庭武.用特征方程推导Fibonacci数列的通项公式[J]..科技信息.2010,2(17).
+.. [9] 黄忠裕．一个数学历史名题的模型建立及其教学设想［J］．湖州师范学院学报，2003，25（3）：	120
+.. [10] 赵秀梅，赵宗吕．Fibonacci数列的应川研究．山尔建筑l：科学院学报，2004：2．4．
+.. [11] 郭晓丽，职桂珍．Fibonacci数列的推广及虑用．郑州轻工业学院学报，2001：3－5．
+.. [12] 陈计．Fibonacci二角形．数学通讯，1994：3－6．
+.. [13] 马巧云．广义Fibonacci数列的通项．硝安联合人学学报，2004：30．32；
+.. [14] 吴茂念．广义Fibonacci数列一些前n项和式．贵州人学学报，2005：343．347．
+.. [15] 静翠薇．计算方法论[M].北京：高等教育出版社，1985.42-47. 

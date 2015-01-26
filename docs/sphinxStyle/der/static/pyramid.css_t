@@ -394,3 +394,7 @@ li .logo{
 cite{
     font-family:song,Verdana,Tahoma, Arial, Helvetica, sans-serif;
 }
+
+p.rubric {
+    display: none;
+}
