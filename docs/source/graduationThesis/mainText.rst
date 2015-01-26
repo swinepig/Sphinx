@@ -278,25 +278,41 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 
 .. math:: F_n = \frac{(\rho_1^{n-1} - \rho_2^{n-1} )F_2 + \mu(\rho_1^{n-2} - \rho_2^{n-2}F_1}{\rho_1 -\rho_2}
 
-:math:`2) \text{若} \Delta = \lambda^2 + 4\mu = 0,` 则 :math:`(5.3)` 式有两相等的实根 :math:`\rho = \lambda \diagup 2,` 将 :math:`\rho` 代入 :math:`(5.2)` 得  :math:`F_n - \rhoF_{n-1} = \rho(F_{n-1} - \rhoF_{n-2})` 类似的有
+:math:`2) \text{若} \Delta = \lambda^2 + 4\mu = 0,` 则 :math:`(5.3)` 式有两相等的实根 :math:`\rho = \lambda \diagup 2,` 将 :math:`\rho` 代入 :math:`(5.2)` 得  :math:`F_n - \rho F_{n-1} = \rho(F_{n-1} - \rho F_{n-2})` 类似的有
 
   .. math::
   
-     \rho(F_{n-1} - \rhoF_{n-2}) = \rho^2(F_{n-2} - \rhoF_{n-3})
+     \rho(F_{n-1} - \rho F_{n-2}) = \rho^2(F_{n-2} - \rho F_{n-3})
      
      \cdots \cdots
      
-     \rho^{n-3}(F_3 - \rhoF_2) = \rho^{n-2}(F_2 - \rhoF_1)
+     \rho^{n-3}(F_3 - \rho F_2) = \rho^{n-2}(F_2 - \rho F_1)
      
 将上面的  :math:`n-2` 个式子相加，消去等号两端相同的项可得
 
-.. math:: F_n = \rho^{n-1}F_1 + (n+1)\rho^{n-2}(F_2 - \rhoF_1) = \rho^{n-2}[(n-1)F_2 - (n-2)\rhoF_1]
+.. math:: F_n = \rho^{n-1}F_1 + (n+1)\rho^{n-2}(F_2 - \rho F_1) = \rho^{n-2}[(n-1)F_2 - (n-2)\rho F_1]
 
 :math:`3) \text{若} \Delta = \lambda^2 + 4\mu < 0,` 与情形 :math:`3)` 类似，:math:`(5.3)` 式有两个共轭的复数根 :math:`\rho \text{和} \bar{\rho}` 
 而 :math:`F_n = \frac{\begin{vmatrix} \rho & (\lambda-\rho)^{n-2}(F_2-\rho F_1)\\ \bar{\rho} & (\lambda-\bar{\rho})^{n-2}(F_2- \bar{\rho} F_1)\end{vmatrix}}{\begin{vmatrix} \rho & 1\\ \bar{\rho} & 1\end{vmatrix}}` 由
 于 :math:`\rho + \bar{\rho} = \lambda,\rho \bar{\rho} = - \mu,` 故
-:marh:`F_n = \frac{\rho^{n-1(F_2-\bar{\rho}F_1) - \bar{\rho}^{n-1}(F_2 - \rhoF_1)}}{\rho - \bar{\rho}} = \frac{(\rho^{n-1} - \bar{\rho}^{n-1})F_2 + \mu(\rho^{n-2} - \bar{\rho}^{n-2)F_1}{\rho - \bar{\rho}}`
+  :marh:`F_n = \frac{\rho^{n-1}(F_2-\bar{\rho}F_1) - \bar{\rho}^{n-1}(F_2 - \rho F_1)}}{\rho - \bar{\rho}} = \frac{(\rho^{n-1} - \bar{\rho}^{n-1})F_2 + \mu(\rho^{n-2} - \bar{\rho}^{n-2})F_1}{\rho - \bar{\rho}}` 若
+令  :math:`\rho = r(\cos \theta + \sin \theta),\text{则} \bar{\rho} = (\cos \theta - i\sin \theta),` 代入 :math:`F_n` 的表达式得
 
+.. math:: F_n = \frac{r^{n-1} \sin(n-1)\theta F_2 + \mu r^{n-3} \sin(n-2) \theta F_1}{\sin \theta}
+
+在数值计算的三次样条插值口 [15]_ 以及用差分方法解常微分方程边值问题时，要处理对角方程组，其系数可构成一个 :math:`n` 阶三对角行列式
+:math:`D_n = \begin{equation}
+\left
+\begin{array}{cccccc}
+a & b &  &  &  & & \\
+c & a & b &  &  &  \\
+& c & a & b &  &  \\
+&  & \ddots & \ddots &  &  \\
+&  &  & c & a & b \\
+& &  &  &  & c & a \\
+\end{array}
+\right)
+\end{equation}`
 
 
 5 参考文献
