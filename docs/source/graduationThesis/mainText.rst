@@ -255,9 +255,18 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 
 :math:`1) \text{若} \Delta = \lambda^2 + 4\mu > 0,` 则 :math:`(5.3)` 式有相异的两实根 :math:`\rho_{1,2} = \frac{1}{2}(\lambda \pm \sqrt{\lambda^2+4\mu}),` 将 :math:`\rho_1` 代入 :math:`(5.2)` 得
   :math:`F_n - \rho_1 F_{n-1} =(\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2})`  类似的有
-  :math:`(\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2}) = (\lambda - \rho_1)^2(F_{n-2} - \rho_1 F_{n-3})`
-  :math:`\cdots \cdots`
-  :math:`(\lambda - \rho_1)^{n-3}(F_3 - \rho_1 F_2) = (\lambda - \rho_1)^{n-2}(F_2 - \rho_1 F_1)`
+
+  .. math::
+  
+     (\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2}) = (\lambda - \rho_1)^2(F_{n-2} - \rho_1 F_{n-3})
+     
+     \cdots \cdots
+     
+     (\lambda - \rho_1)^{n-3}(F_3 - \rho_1 F_2) = (\lambda - \rho_1)^{n-2}(F_2 - \rho_1 F_1)
+     
+:math:`(\lambda - \rho_1)(F_{n-1} - \rho_1 F_{n-2}) = (\lambda - \rho_1)^2(F_{n-2} - \rho_1 F_{n-3})`
+:math:`\cdots \cdots`
+:math:`(\lambda - \rho_1)^{n-3}(F_3 - \rho_1 F_2) = (\lambda - \rho_1)^{n-2}(F_2 - \rho_1 F_1)`
   
 将上面的  :math:`n-2` 个式子相加，消去等号两端相同的项可得
 
@@ -271,7 +280,9 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 :math:`F_n = \frac{\begin{vmatrix} \rho_1 & (\lambda-\rho_1)^{n-2}(F_2-\rho_1 F_1)\\ \rho_2 & (\lambda-\rho_2)^{n-2}(F_2-\rho_2 F_1)\end{vmatrix}}{\begin{vmatrix} \rho_1 & 1\\ \rho_2 & 1\end{vmatrix}}` 由
 于  :math:`\rho_1 + \rho_2 = \lambda,\rho_1\rho_2 = -\mu,` 故
 
-.. math:: F_n = \frac{(\rho_1^{n-1} - \rho_2^{n-1} )F_2 + \mu(\rho_1^{n-2} - \rho_2^{n-2)F_1}{\rho_1 -\rho_2}
+.. math:: F_n = \frac{(\rho_1^{n-1} - \rho_2^{n-1} )F_2 + \mu(\rho_1^{n-2} - \rho_2^{n-2}F_1}{\rho_1 -\rho_2}
+
+:math:`2) \text{若} \Delta = \lambda^2 + 4\mu = 0,` 则 :math:`(5.3)` 式有两相等的实根 :math:`\rho = \lambda \diagup 2` 
 
 
 5 参考文献
