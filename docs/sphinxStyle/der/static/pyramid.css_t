@@ -57,8 +57,8 @@ div.body {
     color: #3E4349;
     font-size: 1em;
     overflow: auto;
-    margin-left:4em;
-    margin-right:4em;
+    margin-left:5em;
+    margin-right:5em;
 }
  
 div.footer {
