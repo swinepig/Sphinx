@@ -29,7 +29,7 @@ div.documentwrapper {
     position:absolute;
     overflow-y:auto;
     top: 64px;
-    bottom:0;
+    bottom:30px;
 }
 
 div.bodywrapper {
