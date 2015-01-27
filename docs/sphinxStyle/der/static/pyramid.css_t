@@ -404,11 +404,11 @@ p.rubric {
 
 .navigation{
 	position:absolute;
-	top:50px;
+	top:70px;
 	bottom:0;
 	margin:0;
 	max-width:150px;
-	min-width:90px;
+	min-width:70px;
 	display:flex;
 	justify-content:center;
 	align-content:center;
