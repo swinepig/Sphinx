@@ -147,7 +147,12 @@
       {%- endif %}
           <div class="body">
             {% block body %} {% endblock %}
-
+            {%- if prev %}
+            <a href="{{ prev.link|e }}" class="navigation navigation-prev" ><i class="fa fa-angle-left"></i></a>
+            {%- endif %}
+            {%- if next %}
+            <a href="{{ next.link|e }}" class="navigation navigation-next" style="margin-right: 17px;"><i class="fa fa-angle-right"></i></a>
+            {%- endif %}            
             {#
             {% include "disqus.html" %}
             #}
