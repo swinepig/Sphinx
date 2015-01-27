@@ -284,7 +284,7 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
 而 :math:`F_n = \frac{\begin{vmatrix} \rho & (\lambda-\rho)^{n-2}(F_2-\rho F_1)\\ \bar{\rho} & (\lambda-\bar{\rho})^{n-2}(F_2- \bar{\rho} F_1)\end{vmatrix}}{\begin{vmatrix} \rho & 1\\ \bar{\rho} & 1\end{vmatrix}}` 由
 于 :math:`\rho + \bar{\rho} = \lambda,\rho \bar{\rho} = - \mu,` 故
 :math:`F_n = \frac{\rho^{n-1}(F_2-\bar{\rho}F_1) - \bar{\rho}^{n-1}(F_2 - \rho F_1)}{\rho - \bar{\rho}} = \frac{(\rho^{n-1} - \bar{\rho}^{n-1})F_2 + \mu(\rho^{n-2} - \bar{\rho}^{n-2})F_1}{\rho - \bar{\rho}}` 若
-令  :math:`\rho = r(\cos \theta + \sin \theta),` :math:`\bar{\rho} = (\cos \theta - i\sin \theta),` 代入 :math:`F_n` 的表达式得
+令  :math:`\rho = r(\cos \theta + \sin \theta),` 则 :math:`\bar{\rho} = (\cos \theta - i\sin \theta),` 代入 :math:`F_n` 的表达式得
 
 .. math:: F_n = \frac{r^{n-1} \sin(n-1)\theta F_2 + \mu r^{n-3} \sin(n-2) \theta F_1}{\sin \theta}
 
@@ -335,7 +335,7 @@ Fibonacci数列的一般项 :math:`F_n` 可表示为 :math:`F_n = \frac{1}{\sqrt
    1.61803398874990
    1.61803398874989
    1.61803398874989
-   % 得到 φΦ≈1.618
+   % 得到 Φ≈1.618
    
 如果我们只是需要第 :math:`n` 个Fibonacci数，那么我们可以采用下面的M-程序，这大大压缩了计算量和存贮空间。
 
