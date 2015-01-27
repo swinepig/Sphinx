@@ -438,3 +438,15 @@ p.rubric {
 .fa-angle-left:before{
 	content:"\f104";
 	}
+	
+#napre:hover{
+	text-decoration:none;
+	color:#444;
+	background-color:white;
+	}
+	
+#nanext:hover{
+	text-decoration:none;
+	color:#444;
+	background-color:white;
+	}
