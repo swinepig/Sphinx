@@ -109,8 +109,8 @@ div.related ul a {
 }
 
 div.related ul a:hover {
-    color:{{ theme_color }};
-    background-color: white;
+    color:white;
+    background-color: {{ theme_color }};
 }
 
 div.sphinxsidebar {
@@ -375,9 +375,6 @@ em {
     font-style: normal;
 }
 
-a, a .pre {
-    color: {{ theme_color }};
-}
 
 body a:hover, body a:hover .pre, a .pre:hover{
     color:white;
