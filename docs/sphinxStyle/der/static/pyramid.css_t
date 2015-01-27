@@ -192,8 +192,9 @@ p.sidebar-title {
 /* -- body styles ----------------------------------------------------------- */
  
 a, a .pre {
-    color: #D82A20;
+    color: #rgba(8, 5, 5, 0.71);
     text-decoration: none;
+    font-weight: bold;
 }
  
 div.body h1,
@@ -378,7 +379,8 @@ em {
 
 body a:hover, body a:hover .pre, a .pre:hover{
     color:white;
-    background-color: {{ theme_color }};
+    background-color: black;
+    font-weight: bold;
 }
 
 li .logo{
