@@ -28,7 +28,7 @@ div.documentwrapper {
     padding-bottom: 30px;
     position:absolute;
     overflow-y:auto;
-    top: 64px;
+    top: 56px;
     bottom:30px;
 }
 
@@ -68,12 +68,14 @@ div.body {
 div.footer {
     color: #555;
     width: 100%;
-    padding: 13px 0;
+    padding: 10px 0 0 0;
     text-align: center;
     font-size: 75%;
     /*background: rgba(241, 240, 240, 0.61);*/
     clear:both;
     border-top:1px solid #ccc;
+    position:absolute;
+    bottom:9px;
 }
  
 div.footer a {
