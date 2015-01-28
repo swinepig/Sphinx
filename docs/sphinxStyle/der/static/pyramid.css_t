@@ -24,11 +24,11 @@ body {
 
 div.documentwrapper {
     float: left;
-    /* width: 100%;*/
+    width: 98%;
     padding-bottom: 30px;
     position:absolute;
     overflow-y:auto;
-    top: 56px;
+    top: 52px;
     bottom:40px;
 }
 
