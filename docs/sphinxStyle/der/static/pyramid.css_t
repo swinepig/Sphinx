@@ -456,3 +456,7 @@ p.rubric {
 	color:#444;
 	background-color:white;
 	}
+	
+.injected{
+	display:none;
+}
