@@ -32,10 +32,10 @@
         {%- for rellink in rellinks %}
         {%- endfor %}
         {%- block rootrellink %}
-        <li><img class="logo" src="{{ pathto('_static/1.png', 1) }}" style="vertical-align: middle; margin-top: 5px; display: none"/></li>
-        <li class="right"><a href="https://github.com/swinepig/Sphinx/" ><i class="fa fa-github"></i></a></li>
-        <li class="right"><a href="http://swinepig.sinaapp.com/" title="个人主页"><i class="fa fa-home"></i></a></li>
-        <li class="right"><a href="{{ pathto(master_doc) }}" title="目录"><i class="fa fa-align-justify"></i></a></li>
+        <!--<li><img class="logo" src="{{ pathto('_static/1.png', 1) }}" style="vertical-align: middle; margin-top: 5px; display: none"/></li>-->
+        <li><a href="https://github.com/swinepig/Sphinx/" title="GitHub"><i class="fa fa-github" style="font-size:20px"></i></a></li>
+        <li><a href="http://swinepig.sinaapp.com/" title="个人主页"><i class="fa fa-home" style="font-size:20px"></i></a></li>
+        <li><a href="{{ pathto(master_doc) }}" title="目录"><i class="fa fa-align-justify" style="font-size:20px"></i></a></li>
         {%- endblock %}
         {%- for parent in parents %}
         {%- endfor %}
