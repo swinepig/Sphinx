@@ -460,3 +460,7 @@ p.rubric {
 .injected{
 	display:none;
 }
+
+img{
+ margin-left:inherit;
+}
