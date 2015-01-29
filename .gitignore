@@ -13,7 +13,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-build/*
+docs/build/*
 # =========================
 # Operating System Files
 # =========================
