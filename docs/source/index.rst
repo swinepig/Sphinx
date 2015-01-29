@@ -1,5 +1,5 @@
 ﻿
-.. image:: ../images/fish.png
+.. image:: ../images/fish.jpg
 
 
 .. toctree::
