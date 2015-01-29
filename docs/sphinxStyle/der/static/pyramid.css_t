@@ -115,8 +115,8 @@ div.related ul a {
 }
 
 div.related ul a:hover {
-    color:white;
-    background-color: {{ theme_color }};
+    color:#ccc;
+    background-color: white;
 }
 
 div.sphinxsidebar {
