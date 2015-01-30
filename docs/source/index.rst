@@ -2,8 +2,6 @@
 目录
 =======
 
-.. image:: ../images/fish.jpg
-
 .. image:: ../images/fish2.jpg
 
 .. toctree::

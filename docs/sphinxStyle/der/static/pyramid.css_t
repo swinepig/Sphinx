@@ -463,5 +463,5 @@ p.rubric {
 
 img{
  float:right;
- margin-righ;10%;
+ width:50%
 }
