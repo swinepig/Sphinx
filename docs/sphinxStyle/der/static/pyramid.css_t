@@ -420,7 +420,7 @@ p.rubric {
 	align-content:center;
 	flex-direction:column;
 	font-size:40px;
-	color:#ccc;
+	color:#ffffff;
 	text-align:center;
 	transition:all 350ms ease}
 	}
