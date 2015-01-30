@@ -4,7 +4,7 @@
 .. image:: ../images/fish2.jpg
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    graduationThesis/index
    part
