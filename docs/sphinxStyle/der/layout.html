@@ -19,6 +19,7 @@
                          (sidebars != []) %}
 {%- set url_root = pathto('', 1) %}
 {%- set css_files = css_files + ["_static/font-awesome.min.css"] %}
+{%- set script_files = script_files + ["_static/fullscreen.js"] %}
 {# XXX necessary? #}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
@@ -55,14 +56,10 @@
       };
       
       if($.support.fullscreen){
-
-
-    $('#fullScreen').click(function(e){
-
-        $('.body').fullScreen();
-     
-    });
-}
+        $('#fullScreen').click(function(e){
+        $('.body').fullScreen();  
+      });
+      }
     </script>
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
