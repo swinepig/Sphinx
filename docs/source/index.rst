@@ -10,7 +10,7 @@
    :maxdepth: 2
 
    graduationThesis/index
-   part
+   test/index
    sphinxExtension/index
    pragram/index
 
