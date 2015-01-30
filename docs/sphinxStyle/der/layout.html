@@ -147,7 +147,9 @@
           <div class="body">
             {% block body %} {% endblock %}
             
+            {%- if !pre %}
             {% include "disqus.html" %}
+            {%- endif %}
 
           </div>
       {%- if render_sidebar %}
