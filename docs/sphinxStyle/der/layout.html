@@ -55,6 +55,11 @@
         HAS_SOURCE:  {{ has_source|lower }}
       };
       
+        $('#fullScreen').click(function(e){
+        	alert(12344);
+        $('.body').fullScreen();  
+      });
+      
       if($.support.fullscreen){
         $('#fullScreen').click(function(e){
         $('.body').fullScreen();  
