@@ -36,6 +36,7 @@
         <li class="right" style="padding-right:20px"><a href="https://github.com/swinepig/Sphinx/" title="GitHub" target="_blank"><i class="fa fa-github" style="font-size:18px"></i></a></li>
         <li class="right" style="padding-right:20px"><a href="http://swinepig.sinaapp.com/" title="个人主页" target="_blank"><i class="fa fa-home" style="font-size:18px"></i></a></li>
         <li style="padding-right:20px"><a href="{{ pathto('', 1) }}" title="目录"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
+        <li style="padding-right:20px" id="fullScreen"><i class="fa fa-glass" style="font-size:18px"></i></li>
         {%- endblock %}
       </ul>
     </div>
@@ -52,6 +53,16 @@
         FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
         HAS_SOURCE:  {{ has_source|lower }}
       };
+      
+      if($.support.fullscreen){
+
+
+    $('#fullScreen').click(function(e){
+
+        $('.body').fullScreen();
+     
+    });
+}
     </script>
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
@@ -69,8 +80,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
-    <meta http-equiv="Page-Enter" content="RevealTrans (Duration=3, Transition=8)">
-    <meta http-equiv="Page-Exit" content="RevealTrans (Duration=3, Transition=23)">
     {{ metatags }}
     {%- block htmltitle %}
     <title>{{ titlesuffix }}</title>
