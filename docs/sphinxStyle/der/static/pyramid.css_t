@@ -24,12 +24,13 @@ body {
 
 div.documentwrapper {
     float: left;
-    width: 98%;
+    width: 75%;
     padding-bottom: 30px;
     position:absolute;
     overflow-y:auto;
     top: 52px;
-    bottom:40px;
+    bottom:35px;
+    left:300px;
 }
 
 div.bodywrapper {
@@ -405,7 +406,7 @@ p.rubric {
 }
 
 .navigation.navigation-prev{
-	left: 0;
+	left: 300px;
 	}
 
 .navigation{
