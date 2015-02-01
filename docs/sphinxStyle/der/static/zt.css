@@ -921,7 +921,7 @@
 }
 
 .wy-menu-vertical ul {
-	margin-bottom: 0;
+	margin: 0;
 	padding:0;
 }
 
@@ -1014,7 +1014,6 @@
 	padding: 0.809em;
 	display: block;
 	color: #fcfcfc;
-	margin-bottom: 0.809em;
 	border-bottom:1px solid #EAE4E4;
 }
 
