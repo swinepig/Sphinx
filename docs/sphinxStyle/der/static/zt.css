@@ -1009,7 +1009,7 @@
 	padding: 0.809em;
 	display: block;
 	color: #fcfcfc;
-	margin-bottom: 0.809em
+	margin-bottom: 0.809em;
 	border-bottom;1px solid #EAE4E4;
 }
 
@@ -1087,7 +1087,7 @@
     position:absolute;
     overflow-y:auto;
     top: 52px;
-    bottom:35px;
+    bottom:37px;
 }
 
 .wy-nav-side {
