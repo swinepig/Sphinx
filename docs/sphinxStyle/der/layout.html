@@ -39,7 +39,7 @@
         <li style="padding-right:20px"><a href="{{ pathto('', 1) }}" title="目录"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
         {%- endblock %}
       </ul>
-      <button id="buon">点击这里进行切换</button>
+      <button id="buon" onClick="ff">点击这里进行切换</button>
     </div>
 {%- endmacro %}
 
@@ -48,6 +48,9 @@
 {%- macro script() %}
     <script type="text/javascript">
     	
+    	function ff(){
+    		 alert(222);
+    		}
     	$(document).ready(function(){
        $("#buon").click(function(){
         alert(222);
