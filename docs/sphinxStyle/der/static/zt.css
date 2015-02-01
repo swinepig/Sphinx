@@ -1036,11 +1036,9 @@
 
 .wy-side-nav-search>a,.wy-side-nav-search .wy-dropdown>a {
 	color: #9c9c9c;
-	font-size: 100%;
+	font-size: 130%;
 	font-weight: bold;
 	display: inline-block;
-	padding: 4px 6px;
-	margin-bottom: 0.809em
 }
 
 .wy-side-nav-search>a:hover,.wy-side-nav-search .wy-dropdown>a:hover {
