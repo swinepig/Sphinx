@@ -947,11 +947,11 @@
 }
 
 .wy-menu-vertical li.on a,.wy-menu-vertical li.current>a {
-	color: #404040;
+	/*color: #404040;*/
 	padding: 0.4045em 1.618em;
 	font-weight: bold;
 	position: relative;
-	background: #fcfcfc;
+	background: #B4B4B4;
 	border: none;
 	border-bottom: solid 1px #c9c9c9;
 	border-top: solid 1px #c9c9c9;
@@ -959,7 +959,7 @@
 }
 
 .wy-menu-vertical li.on a:hover,.wy-menu-vertical li.current>a:hover {
-	background: #fcfcfc
+	background: #B4B4B4;
 }
 
 .wy-menu-vertical li.toctree-l2.current>a {
@@ -1001,11 +1001,12 @@
 	cursor: pointer
 }
 
+/*
 .wy-menu-vertical a:active {
 	background-color: #2980B9;
 	cursor: pointer;
 	color: #fff
-}
+}*/
 
 .wy-side-nav-search {
 	z-index: 200;
@@ -1234,3 +1235,6 @@ nav.stickynav {
 	top: 0
 }
 
+.wy-side-nav-search>a:hover{
+	color:#ccc;
+}
