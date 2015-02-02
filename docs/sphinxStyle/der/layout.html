@@ -79,7 +79,7 @@
          function check2(){
           var bodywrapper = $('.documentwrapper');
           var navigationprev = $('.navigation.navigation-prev');
-          if(sidebarwrapper.css('display')=='block'){
+          if($('.wy-grid-for-nav').css('display')=='block'){
             bodywrapper.css('left','0');
             navigationprev.css('left','10px');
             $('.wy-grid-for-nav').hide(1000);
@@ -92,7 +92,7 @@
          function check3(){
           var bodywrapper = $('.documentwrapper');
           var navigationprev = $('.navigation.navigation-prev');
-          if(sidebarwrapper.css('display')=='block'){
+          if($('.wy-grid-for-nav').css('display')=='block'){
             bodywrapper.css('left','0');
             navigationprev.css('left','10px');
             $('.wy-grid-for-nav').fadeOut("slow");
