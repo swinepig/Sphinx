@@ -37,6 +37,8 @@
         <li class="right" style="padding-right:20px"><a href="https://github.com/swinepig/Sphinx/" title="GitHub" target="_blank"><i class="fa fa-github" style="font-size:18px"></i></a></li>
         <li class="right" style="padding-right:20px"><a href="http://swinepig.sinaapp.com/" title="个人主页" target="_blank"><i class="fa fa-home" style="font-size:18px"></i></a></li>
         <li style="padding-right:20px"><a href="#" title="目录" onclick="check()"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
+        <li style="padding-right:20px"><a href="#" title="目录" onclick="check2()"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
+        <li style="padding-right:20px"><a href="#" title="目录" onclick="check3()"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
         {%- endblock %}
       </ul>
     </div>
@@ -61,18 +63,44 @@
     
       <script type="text/javascript">
        function check(){
-       var bodywrapper = $('.documentwrapper');
-       var sidebarwrapper = $('.wy-grid-for-nav');
-       var navigationprev = $('.navigation.navigation-prev');
-       if(sidebarwrapper.css('display')=='block'){
-          bodywrapper.css('left','0');
-          sidebarwrapper.css('display','none');
-          navigationprev.css('left','10px');
-       }else{
-        bodywrapper.css('left','270px');
-        sidebarwrapper.css('display','block');
-       }
-     }
+          var bodywrapper = $('.documentwrapper');
+          var sidebarwrapper = $('.wy-grid-for-nav');
+          var navigationprev = $('.navigation.navigation-prev');
+          if(sidebarwrapper.css('display')=='block'){
+            bodywrapper.css('left','0');
+            sidebarwrapper.css('display','none');
+            navigationprev.css('left','10px');
+          }else{
+           bodywrapper.css('left','270px');
+           sidebarwrapper.css('display','block');
+          }
+        }
+        
+         function check2(){
+          var bodywrapper = $('.documentwrapper');
+          var navigationprev = $('.navigation.navigation-prev');
+          if(sidebarwrapper.css('display')=='block'){
+            bodywrapper.css('left','0');
+            navigationprev.css('left','10px');
+            $('.wy-grid-for-nav').hide(1000);
+          }else{
+           bodywrapper.css('left','270px');
+            $('.wy-grid-for-nav').show(1000);
+          }
+        }
+        
+         function check3(){
+          var bodywrapper = $('.documentwrapper');
+          var navigationprev = $('.navigation.navigation-prev');
+          if(sidebarwrapper.css('display')=='block'){
+            bodywrapper.css('left','0');
+            navigationprev.css('left','10px');
+            $('.wy-grid-for-nav').fadeOut("slow");
+          }else{
+           bodywrapper.css('left','270px');
+            $('.wy-grid-for-nav').fadeIn("slow");
+          }
+        }
     	</script>
 {%- endmacro %}
 
