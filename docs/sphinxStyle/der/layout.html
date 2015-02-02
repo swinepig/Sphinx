@@ -60,20 +60,23 @@
     {%- endfor %}
     
       <script type="text/javascript">
-    	function check(){
-    		 alert("444");
-    		
-    	/*	var bodywrapper = $('.documentwrapper');
+       function check(){
+       var bodywrapper = $('.documentwrapper');
        var sidebarwrapper = $('.wy-grid-for-nav');
-       bodywrapper.css({
+       if(sidebarwrapper.css('display')=='block'){
+          bodywrapper.css({
         'left': '0',
         'width': '98%'
-    });
-
-  sidebarwrapper.css('display','none');*/
-  
-   alert("222");
-    		}
+       });
+      sidebarwrapper.css('display','none');
+     }else{
+      bodywrapper.css({
+        'left': '340px',
+        'width': '75%'
+       });
+      sidebarwrapper.css('display','block');
+     }
+     }
     	</script>
 {%- endmacro %}
 
