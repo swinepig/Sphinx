@@ -192,10 +192,13 @@
       {%- endif %}
           <div class="body">
             {% block body %} {% endblock %}
+            
+            {#
             {%- if prev %}
             {% include "disqus.html" %}
             {%- endif %}
-
+             #}
+       
           </div>
       {%- if render_sidebar %}
         </div>
