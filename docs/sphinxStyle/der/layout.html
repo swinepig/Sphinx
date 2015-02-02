@@ -62,7 +62,17 @@
       <script type="text/javascript">
     	function check(){
     		 alert("444");
-    		 alert(222);
+    		
+    		var bodywrapper = $('.documentwrapper');
+       var sidebarwrapper = $('.wy-grid-for-nav');
+       bodywrapper.css({
+        'left': '0',
+        'width': '98%'
+    });
+
+  sidebarwrapper.css('display','none');
+  
+   alert("222");
     		}
     	</script>
 {%- endmacro %}
@@ -179,7 +189,7 @@
         </div>
        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           {% block menu %}
-          {% set toctree = toctree(maxdepth=2, collapse=True, includehidden=True) %}
+          {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
           {% if toctree %}
               {{ toctree }}
           {% else %}
