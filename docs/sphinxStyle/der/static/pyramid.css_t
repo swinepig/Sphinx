@@ -24,13 +24,13 @@ body {
 
 div.documentwrapper {
     float: left;
-    width: 75%;
+    right:13px;
     padding-bottom: 30px;
     position:absolute;
     overflow-y:auto;
     top: 52px;
     bottom:37px;
-    left:300px;
+    left:270px;
 }
 
 div.bodywrapper {

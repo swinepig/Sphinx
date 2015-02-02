@@ -1091,6 +1091,7 @@
     overflow-y:auto;
     top: 52px;
     bottom:37px;
+    width:20%
 }
 
 .wy-nav-side {
@@ -1100,7 +1101,8 @@
 	overflow: hidden;
 	min-height: 100%;
 	background: #fafafa;
-	z-index: 200
+	z-index: 200;
+	right:0;
 }
 
 .wy-nav-top {
