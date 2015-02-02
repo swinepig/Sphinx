@@ -9,7 +9,6 @@
 
    graduationThesis/index
    test/index
-   sphinxExtension/index
    pragram/index
 
 
