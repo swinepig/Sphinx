@@ -36,7 +36,7 @@
         <!--<li><img class="logo" src="{{ pathto('_static/1.png', 1) }}" style="vertical-align: middle; margin-top: 5px; display: none"/></li>-->
         <li class="right" style="padding-right:20px"><a href="https://github.com/swinepig/Sphinx/" title="GitHub" target="_blank"><i class="fa fa-github" style="font-size:18px"></i></a></li>
         <li class="right" style="padding-right:20px"><a href="http://swinepig.sinaapp.com/" title="个人主页" target="_blank"><i class="fa fa-home" style="font-size:18px"></i></a></li>
-        <li style="padding-right:20px"><a href="{{ pathto('', 1) }}" title="目录"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
+        <li style="padding-right:20px"><a href="#" title="目录" onclick="check()"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
         {%- endblock %}
       </ul>
     </div>
@@ -64,10 +64,10 @@
        var bodywrapper = $('.documentwrapper');
        var sidebarwrapper = $('.wy-grid-for-nav');
        if(sidebarwrapper.css('display')=='block'){
-          bodywrapper.css('left': '0');
+          bodywrapper.css('left' '0');
       sidebarwrapper.css('display','none');
      }else{
-      bodywrapper.css('left': '270px');
+      bodywrapper.css('left' '270px');
       sidebarwrapper.css('display','block');
      }
      }
