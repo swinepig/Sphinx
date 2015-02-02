@@ -63,13 +63,15 @@
        function check(){
        var bodywrapper = $('.documentwrapper');
        var sidebarwrapper = $('.wy-grid-for-nav');
+       var navigationprev = $('.navigation.navigation-prev');
        if(sidebarwrapper.css('display')=='block'){
           bodywrapper.css('left','0');
-      sidebarwrapper.css('display','none');
-     }else{
-      bodywrapper.css('left','270px');
-      sidebarwrapper.css('display','block');
-     }
+          sidebarwrapper.css('display','none');
+          navigationprev.css('left','10px');
+       }else{
+        bodywrapper.css('left','270px');
+        sidebarwrapper.css('display','block');
+       }
      }
     	</script>
 {%- endmacro %}
@@ -162,8 +164,6 @@
       {%- endif %}
           <div class="body">
             {% block body %} {% endblock %}
-            <button id="btn1" onclick="check()">显示文本</button>
-            <button id="btn2">显示 HTML</button>
             {%- if prev %}
             {% include "disqus.html" %}
             {%- endif %}
