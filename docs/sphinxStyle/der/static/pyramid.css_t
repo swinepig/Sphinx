@@ -30,7 +30,7 @@ div.documentwrapper {
     overflow-y:auto;
     top: 52px;
     bottom:37px;
-    left:270px;
+    left:0;
 }
 
 div.bodywrapper {
@@ -406,7 +406,7 @@ p.rubric {
 }
 
 .navigation.navigation-prev{
-	left: 270px;
+	left: 10px;
 	}
 
 .navigation{
