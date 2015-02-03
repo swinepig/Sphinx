@@ -4,7 +4,7 @@
  */
 
 $(function() {
-
+    alert(document.cookie);
     var bodywrapper = $('.documentwrapper');
     var navigationprev = $('.navigation.navigation-prev');
     var nav = $('.wy-grid-for-nav');
@@ -33,9 +33,7 @@ $(function() {
 
     function set_position_from_cookie() {
         if (!document.cookie) return;
-        var items = document.cookie.split(';');
-        for (var k = 0; k < items.length; k++) {
-            var key_val = items[k].split('=');
+            var key_val = document.cookie.split('=');
             var key = key_val[0];
             if (key == 'sidebar') {
                 var value = key_val[1];
@@ -49,6 +47,5 @@ $(function() {
                     nav.show();
                 }
             }
-        }
     }
 });
