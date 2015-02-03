@@ -4,7 +4,6 @@
  */
 
 $(function() {
-    alert(document.cookie);
     var bodywrapper = $('.documentwrapper');
     var navigationprev = $('.navigation.navigation-prev');
     var nav = $('.wy-grid-for-nav');
