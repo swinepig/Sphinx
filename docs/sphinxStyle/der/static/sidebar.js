@@ -47,4 +47,15 @@ $(function() {
             nav.show();
         }
     }
+
+  $('.wy-menu-vertical ul li').mouseenter(function(){
+		$(this).children('ul').children('li').children('a').css('padding','0.4045em 2.427em');
+  	$(this).children('ul').show();
+  	}
+  );
+  
+  $('.wy-menu-vertical ul li').mouseleave(function(){
+  	$(this).children('ul').hide();
+  	}
+  );
 });
