@@ -20,7 +20,7 @@
 {%- set url_root = pathto('', 1) %}
 {%- set css_files = css_files + ["_static/font-awesome.min.css"] %}
 {%- set css_files = css_files + ["_static/zt.css"] %}
-{%- set script_files = script_files + ["_static/sidebar.js"] %}
+{%- set script_files = script_files + ["_static/sidebar.js","_static/jquery.cookie.js"] %}
 {# XXX necessary? #}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
