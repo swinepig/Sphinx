@@ -38,11 +38,11 @@ $(function() {
             var key = key_val[0];
             if (key == 'sidebar') {
                 var value = key_val[1];
-                if ((value == 'collapsed') && (!sidebar_is_collapsed())) {
+                if ((value == 'collapsed')) {
                     bodywrapper.css('left', '0px');
                     navigationprev.css('left', '10px');
                     nav.hide();
-                } else if ((value == 'expanded')  && (sidebar_is_collapsed())) {
+                } else if ((value == 'expanded')) {
                     bodywrapper.css('left', '270px');
                     navigationprev.css('left', '270px');
                     nav.show();
