@@ -50,6 +50,7 @@ $(function() {
 
   $('.wy-menu-vertical ul li').mouseenter(function(){
 		$(this).children('ul').children('li').children('a').css('padding','0.4045em 2.427em');
+		$(this).children('ul').children('li').children('ul').children('li').children('a').css('padding','0.4045em 4em');
   	$(this).children('ul').show();
   	}
   );
