@@ -55,6 +55,16 @@
         FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
         HAS_SOURCE:  {{ has_source|lower }}
       };
+      
+ 
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?11da2f386bd918bb633ce2a346c1777f";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+
     </script>
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
