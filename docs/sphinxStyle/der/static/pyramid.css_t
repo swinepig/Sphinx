@@ -111,7 +111,7 @@ div.related ul {
 }
 
 div.related ul a {
-    color: rgba(8, 5, 5, 0.71);
+    color: black;
     font-weight: bold;
 }
 
