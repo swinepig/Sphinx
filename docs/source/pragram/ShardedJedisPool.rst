@@ -34,7 +34,7 @@ ShardedJedis这个对象通过ShardedJedisPool来创建
   
    ShardedJedisPool pool = new ShardedJedisPool(final GenericObjectPool.Config poolConfig,List<JedisShardInfo> shards)
    
-第二个参数shards就是所有节点信息的集合包括：节点IP，监听port，密码password。最后参数和另外两个参数一起构建一个ShardedJedisFactory对象，ShardedJedis就是
+第二个参数shards就是所有节点信息的集合包括：节点IP，监听port，密码password。最后参数和另外两个参数一起构建一个ShardedJedisFactory对象(为ShardedJedisPool私有内部对象)，ShardedJedis就是
 从这个工厂对象里生产的。
 
 .. code-block:: java
@@ -43,6 +43,22 @@ ShardedJedis这个对象通过ShardedJedisPool来创建
             List<JedisShardInfo> shards, Hashing algo, Pattern keyTagPattern) {
         super(poolConfig, new ShardedJedisFactory(shards, algo, keyTagPattern));
     }
+
+.. code-block:: java
+
+   jedis = pool.getResource();
+   
+可以看出jedis对象是从池中获取的，分析代码可知pool.getResource()->internalPool.borrowObject()->factory.makeObject()。最后通过上面创建的ShardedJedisFactory对象
+的makeObject()方法得到了ShardedJedis对象。
+
+.. code-block:: java
+
+   public Object makeObject() throws Exception {
+            ShardedJedis jedis = new ShardedJedis(shards, algo, keyTagPattern);
+            return jedis;
+        }
+
+构建ShardedJedis对象时进行了一步初始化操作，通过一致性哈希算法将所有节点(server)散列开来。
 
 .. code-block:: java
 
@@ -68,4 +84,50 @@ ShardedJedis这个对象通过ShardedJedisPool来创建
    对每个真实节点增加虚拟节点作用为尽可能的分散节点的分布状态
    
    KEY如何分配到节点？根据KEY的HASH从所有虚拟节点圈中选取一个虚拟节点-->真实节点
+   
+   默认HASH算法为MURMUR_HASH
+   
+
+.. code-block:: java
+
+   jedis.incr("foo");
+   
+   //incr方法
+   public Long incr(String key) {
+			Jedis j = getShard(key);
+			return j.incr(key);
+    }
+    
+    public String set(String key, String value) {
+	  	Jedis j = getShard(key);
+	    return j.set(key, value);
+    }
+
+    public String get(String key) {
+			Jedis j = getShard(key);
+	    return j.get(key);
+    }
+    
+所以可以看到最终还是通过Jedis对象来和redis通信.
+
+getShard方法
+
+.. code-block:: java
+
+    public R getShard(byte[] key) {
+        return resources.get(getShardInfo(key));
+    }
+    
+getShardInfo方法
+
+.. code-block:: java
+
+    public S getShardInfo(byte[] key) {
+        SortedMap<Long, S> tail = nodes.tailMap(algo.hash(key));
+        if (tail.isEmpty()) {
+            return nodes.get(nodes.firstKey());
+        }
+        return tail.get(tail.firstKey());
+    }
+
    
