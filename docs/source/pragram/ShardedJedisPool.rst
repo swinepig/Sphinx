@@ -79,13 +79,15 @@ ShardedJedis这个对象通过ShardedJedisPool来创建
     }
     
 .. note::
-   对于每个节点（不同IP和端口）分配160*Weight（默认为1）个虚拟节点，这160*Weight（默认为1）个虚拟节点都指向同一个真实节点
+   Redis服务器节点划分：将每台服务器节点采用hash算法划分为160个虚拟节点(可以配置划分权重)
    
-   对每个真实节点增加虚拟节点作用为尽可能的分散节点的分布状态
+   将划分虚拟节点采用TreeMap存储
    
-   KEY如何分配到节点？根据KEY的HASH从所有虚拟节点圈中选取一个虚拟节点-->真实节点
+   对每个Redis服务器的物理连接采用LinkedHashMap存储
    
-   默认HASH算法为MURMUR_HASH
+   对Key or KeyTag 采用同样的hash算法，然后从TreeMap获取大于等于键hash值得节点，取最邻近节点存储；当key的hash值大于虚拟节点hash值得最大值时，存入第一个虚拟节点
+
+   sharded采用的hash算法：MD5 和 MurmurHash两种；默认采用64位的MurmurHash算法；MurmurHash是一种高效，低碰撞的hash算法
    
 
 .. code-block:: java
