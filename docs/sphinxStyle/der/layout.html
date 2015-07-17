@@ -40,6 +40,7 @@
          <li class="right" style="padding-right:20px"><a href="http://weibo.com/516783641/" title="微博" target="_blank"><i class="fa fa-pinterest" style="font-size:18px"></i></a></li>
         <li style="padding-right:20px"><a href="#" title="目录" class="sibebarz"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
         <li style="padding-right:20px"><wb:share-button appkey="744024076" addition="simple" type="icon"></wb:share-button></li>
+        <li style="padding-right:20px"><wb:follow-button uid="1780359092" type="gray_2" width="136" height="24" ></wb:follow-button></li>
         {%- endblock %}
       </ul>
     </div>
@@ -164,9 +165,9 @@
       {%- endif %}
           <div class="body">
             {% block body %} {% endblock %}
-  
-            {% include "disqus.html" %}
-            
+            {%- if prev %}
+                {% include "disqus.html" %}
+            {%- endif %}
           </div>
       {%- if render_sidebar %}
         </div>
