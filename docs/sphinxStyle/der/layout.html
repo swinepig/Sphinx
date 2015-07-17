@@ -39,6 +39,7 @@
         <li class="right" style="padding-right:20px"><a href="http://swinepig.sinaapp.com/" title="个人主页" target="_blank"><i class="fa fa-home" style="font-size:18px"></i></a></li>
          <li class="right" style="padding-right:20px"><a href="http://weibo.com/516783641/" title="微博" target="_blank"><i class="fa fa-pinterest" style="font-size:18px"></i></a></li>
         <li style="padding-right:20px"><a href="#" title="目录" class="sibebarz"><i class="fa fa-align-justify" style="font-size:18px"></i></a></li>
+        <li style="padding-right:20px"><wb:share-button appkey="744024076" addition="simple" type="icon"></wb:share-button></li>
         {%- endblock %}
       </ul>
     </div>
@@ -47,6 +48,7 @@
 {%- macro sidebar() %}{%- endmacro %}
 
 {%- macro script() %}
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
     	
       var DOCUMENTATION_OPTIONS = {
@@ -81,7 +83,7 @@
     {%- endfor %}
 {%- endmacro %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:wb="http://open.weibo.com/wb">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     <meta property="wb:webmaster" content="1bff4e509d251d2f" />
