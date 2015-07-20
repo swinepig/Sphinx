@@ -3,7 +3,6 @@ DER
 
 ``DER == reverse("RED")``
 
-本项目是 `《Redis 设计与实现》 <http://www.redisbook.com>`_ 所使用的 Sphinx 样式。
 
 样式特点：
 
