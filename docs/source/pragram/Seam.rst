@@ -189,10 +189,10 @@ Take the following JSF navigation rule, for example:
     </navigation-rule> 
     
 
- * The view id of the page that produces the outcome.
- * The outcome id.
- * The destination view.
- * Optional redirect tag for Redirect-after-post.
+* The view id of the page that produces the outcome.
+* The outcome id.
+* The destination view.
+* Optional redirect tag for Redirect-after-post.
  
 Using Seam, this can be represented in pages.xml as:
 
@@ -206,9 +206,9 @@ Using Seam, this can be represented in pages.xml as:
     </page>
     
 
- * The view id of the page that produces the outcome.
- * The outcome id is specified using <rule if-outcome="...">.
- * The destination is a redirect element in this case. 
+* The view id of the page that produces the outcome.
+* The outcome id is specified using <rule if-outcome="...">.
+* The destination is a redirect element in this case. 
  
 Not only is this more compact than the JSF way, it is also possible to eliminate the outcome strings from the application and replace them with EL expressions using <rule if="... EL expr"> syntax:
 
@@ -222,9 +222,9 @@ Not only is this more compact than the JSF way, it is also possible to eliminate
    </page> 
    
 
- * The view id of the page that produces the outcome.
- * Instead of specifying an outcome string, we use an EL expression to invoke a method on a SFSB which will return a boolean.
- * The destination is the same redirect element.
+* The view id of the page that produces the outcome.
+* Instead of specifying an outcome string, we use an EL expression to invoke a method on a SFSB which will return a boolean.
+* The destination is the same redirect element.
  
  
  
@@ -270,9 +270,9 @@ Here are some typical exceptions:
    </exception> 
    
 
- * You can force Seam to end the current conversation with the <end-conversation/> element.
- * The severity level of the Faces message can be set using the severity attribute.
- * Note that you can use EL in the message, and that there is a 'handledException' context variable set to the actual exception.
+* You can force Seam to end the current conversation with the <end-conversation/> element.
+* The severity level of the Faces message can be set using the severity attribute.
+* Note that you can use EL in the message, and that there is a 'handledException' context variable set to the actual exception.
  
  
 <redirect>
@@ -296,13 +296,3 @@ Things to watch out for...
  * Make sure that <param> expressions do not rely on any side effects of page actions or <restrict> expressions. Page parameters are processed right at the beginning of the JSF Lifecycle, before most other Seam page processing. For example, don't count on <restrict> or login-required to cause a redirect before the params are processed.
  * <begin-conversation/> can create lots of [`Abandoned Conversations`]! - Using <begin-conversation/> without join="true" in page.xml will create a new [`Long Running Conversation`] on each request. This may even appear to propagate values from page to page, but that is just due to rendering the values on the screen and then reading them back into the new conversation.
  
- 
- 
-+------------------------+------------+----------+----------+
-| Header row, column 1   | Header 2   | Header 3 | Header 4 |
-| (header rows optional) |            |          |          |
-+========================+============+==========+==========+
-| body row 1, column 1   | column 2   | column 3 | column 4 |
-+------------------------+------------+----------+----------+
-| body row 2             | ...        | ...      |          |
-+------------------------+------------+----------+----------+
