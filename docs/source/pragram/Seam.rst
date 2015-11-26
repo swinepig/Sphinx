@@ -53,11 +53,12 @@ DTD
 The DTD declaration for version 1.2 looks like this:
 
 .. code-block:: java
+
    <!DOCTYPE pages PUBLIC  "-//JBoss/Seam Pages Configuration DTD 1.2//EN"  "http://jboss.com/products/seam/pages-1.2.dtd">
    
 
 Elements and attributes
-=============================
+---------------------------------
 
 
 <pages>
@@ -135,6 +136,7 @@ The <restrict> element specifies an EL expression that will be evaluated every t
 For example:
 
 .. code-block:: java
+
    <page view-id="/somepage.xhtml" login-required="true">         
    <restrict>#{mySeamComponent.ableToSeeSomePage}</restrict> 
    </page> 
@@ -143,6 +145,7 @@ This will invoke the isAbleToSeeSomePage() method on the component bound to the 
 
 
 .. code-block:: java
+
    <exception class="org.jboss.seam.security.AuthorizationException">         
    <end-conversation/>         
    <redirect view-id="/accessdenied.xhtml">             
@@ -175,6 +178,7 @@ Seam also allows you to specify navigation rules in pages.xml. This can be more 
 Take the following JSF navigation rule, for example:
 
 .. code-block:: java
+
     <navigation-rule>         
     <from-view-id>/pagewithlink.xhtml</from-view-id>  (1)        
     <navigation-case>             
@@ -192,6 +196,7 @@ Take the following JSF navigation rule, for example:
 Using Seam, this can be represented in pages.xml as:
 
 .. code-block:: java
+
     <page view-id="/pagewithlink.xhtml">       (1)     
     <navigation>       <rule if-outcome="first">              (2)         
     <redirect view-id="/first.xhtml"/>   (3)       
@@ -206,6 +211,7 @@ Using Seam, this can be represented in pages.xml as:
 Not only is this more compact than the JSF way, it is also possible to eliminate the outcome strings from the application and replace them with EL expressions using <rule if="... EL expr"> syntax:
 
 .. code-block:: java
+
    <page view-id="/pagewithlink.xhtml">       (1)     
    <navigation>       <rule if="#{theSfsb.goodToGo}">        (2)        
    <redirect view-id="/first.xhtml"/>   (3)       
@@ -227,6 +233,7 @@ The <exception> element tells Seam what to do if a particular exception is throw
 Here are some typical exceptions:
 
 .. code-block:: java
+
    <exception class="org.jboss.seam.security.NotLoggedInException">         
    <redirect view-id="/accessdenied.xhtml">             
    <message>You must be logged in to perform this action</message>         
@@ -272,6 +279,7 @@ The <redirect> element can be used inside navigation rules and exception handlin
 Example:
 
 .. code-block:: java
+
    <redirect view-id="/some-other-view.xhtml"/> 
    
    
@@ -282,4 +290,4 @@ Things to watch out for...
  * Don't map the same view with fine graned .page.xml files and global pages.xml! This can cause hours of head-scratching and wondering why <param> elements are not working.
  * Make sure the view-id matches the URI for the page when using .page.xml files! It's a little redundant to specify the view id, but if you get it wrong very strange things will happen.
  * Make sure that <param> expressions do not rely on any side effects of page actions or <restrict> expressions. Page parameters are processed right at the beginning of the JSF Lifecycle, before most other Seam page processing. For example, don't count on <restrict> or login-required to cause a redirect before the params are processed.
- * <begin-conversation/> can create lots of `[Abandoned Conversations]`! - Using <begin-conversation/> without join="true" in page.xml will create a new `[Long Running Conversation]` on each request. This may even appear to propagate values from page to page, but that is just due to rendering the values on the screen and then reading them back into the new conversation.
+ * <begin-conversation/> can create lots of [`Abandoned Conversations`]! - Using <begin-conversation/> without join="true" in page.xml will create a new [`Long Running Conversation`] on each request. This may even appear to propagate values from page to page, but that is just due to rendering the values on the screen and then reading them back into the new conversation.
