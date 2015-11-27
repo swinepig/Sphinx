@@ -79,10 +79,10 @@ login-view-id	               Where to go when the user isn't logged in.
 
 The <page> element defines the behavior of a specific view, and it can be nested in the <pages> element in the overall pages.xml file, or it can be inside a view specific .page.xml file (see this section for more). With the <page> element you can define:
 
- #. Security restrictions for the view, plus where to go when the user is not logged in.
- #. Request parameter processing (a little like outjection).
- #. An action that will be invoked just before the view is rendered.
- #. Navigation rules for the view, either mapping outcome strings to other view IDs (similar to JSF navigation rules) or EL expression evaluation.
+ * Security restrictions for the view, plus where to go when the user is not logged in.
+ * Request parameter processing (a little like outjection).
+ * An action that will be invoked just before the view is rendered.
+ * Navigation rules for the view, either mapping outcome strings to other view IDs (similar to JSF navigation rules) or EL expression evaluation.
  
 The attributes for the <page> element are: 
 
@@ -120,8 +120,8 @@ This will begin a new conversation, just like the @Begin annotation except it is
 
 Page actions invoked before the RENDER_RESPONSE phase. This means that:
 
- #. For GET requests, the page parameters are applied before the page action is invoked.
- #. For JSF postback requests, the page action is invoked after the JSF action method.
+ * For GET requests, the page parameters are applied before the page action is invoked.
+ * For JSF postback requests, the page action is invoked after the JSF action method.
  
 ====================  =========================================================================================================================================================================  
      Attribute                           Description  
