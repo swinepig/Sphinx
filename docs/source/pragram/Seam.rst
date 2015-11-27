@@ -10,7 +10,7 @@ The pages.xml file and any .page.xml file is Seam's way of describing:
  * RESTful (non-Faces) pages - That is, what to do with the URL parameters for a GET request.
  * View restrictions - Restrict users from viewing pages based on an EL expression.
  * Page actions - Invoke EL expressions whenever a page is accessed (RESTful or not).
- * Page flow - The Seam <navigation> elements can replace the ordinary JSF navigation rules.
+ * Page flow - The Seam :ref:`navigation-label` elements can replace the ordinary JSF navigation rules.
 
 
 Global pages.xml file
@@ -91,7 +91,7 @@ The attributes for the <page> element are:
 ==================== ========================================================================================================================================================================================================================================================================
 view-id                   The relative URL of the page in the WAR.
 login-view-id	            If true, a NotLoggedIn exception will be thrown if Identity.getInstance().isLoggedIn() returns false. Works well if the login-view-id attribute is defined on the <pages> element. This is appliedbefore the restrict expressions and before the page actions.
-action                    An EL expression that evaluates to an action method that will be invoked just before rendering the page. (see <action>)
+action                    An EL expression that evaluates to an action method that will be invoked just before rendering the page. (see :ref:`action-label`)
 ==================== ========================================================================================================================================================================================================================================================================
 
 
@@ -112,6 +112,8 @@ This element specifies any parameter processing that should happen for GET reque
 
 This will begin a new conversation, just like the @Begin annotation except it is done in the action phase.
 
+
+.. _action-label:
 
 <action>
 ^^^^^^^^^^^^
@@ -169,6 +171,8 @@ This is the label that will be given to the long running conversation (if there 
 
 Don't confuse the description of the conversation with the conversation id! They are not the same thing. You may want to even have the same conversation have different descriptions depending on what state of the page flow you are in. For example, a 4 page 'wizard' will have the same conversation and conversation id flow between pages, but the conversation description shown in the switcher should display the page number in the wizard (page 3 of 4).
 
+
+.. _navigation-label:
 
 <navigation>
 ^^^^^^^^^^^^^^^^
