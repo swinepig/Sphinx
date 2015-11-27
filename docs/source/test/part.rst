@@ -1,6 +1,7 @@
 ﻿部分语法
 ========
 
+.. _my-reference-label:
 
 列表
 ----
@@ -58,6 +59,8 @@ True   True   True
 .. danger::
    danger危险
 
+
+需引用自身, 查看 :ref:`my-reference-label`.
 
 
 语法产品
