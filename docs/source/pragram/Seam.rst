@@ -199,7 +199,8 @@ Using Seam, this can be represented in pages.xml as:
 .. code-block:: java
 
     <page view-id="/pagewithlink.xhtml">       (1)     
-    <navigation>       <rule if-outcome="first">              (2)         
+    <navigation>       
+    <rule if-outcome="first">              (2)         
     <redirect view-id="/first.xhtml"/>   (3)       
     </rule>     
     </navigation>   
@@ -215,7 +216,8 @@ Not only is this more compact than the JSF way, it is also possible to eliminate
 .. code-block:: java
 
    <page view-id="/pagewithlink.xhtml">       (1)     
-   <navigation>       <rule if="#{theSfsb.goodToGo}">        (2)        
+   <navigation>       
+   <rule if="#{theSfsb.goodToGo}">        (2)        
    <redirect view-id="/first.xhtml"/>   (3)       
    </rule>     
    </navigation>   
