@@ -319,8 +319,9 @@ pre {
     margin-top: 15px;
     font-family:Consolas;
     font-size:0.9em;
-    border: #e0e0e0 1px solid;
+    /* border: #e0e0e0 1px solid; */
     border-radius: 3px 3px 3px 3px;
+    border-left: 3px solid #31beb1;
 }
  
 tt {
@@ -480,4 +481,9 @@ table.docutils td, table.docutils th {
     border-right: 0;
     border-bottom: 1px solid #aaa;
     border: 1px solid #E0E0E0;
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    padding: 0 15px;
 }
