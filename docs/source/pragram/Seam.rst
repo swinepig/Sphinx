@@ -84,7 +84,7 @@ The <page> element defines the behavior of a specific view, and it can be nested
  #. An action that will be invoked just before the view is rendered.
  #. Navigation rules for the view, either mapping outcome strings to other view IDs (similar to JSF navigation rules) or EL expression evaluation.
  
-The attributes for the <page> element are:
+The attributes for the <page> element are: 
 
 ==================== ========================================================================================================================================================================================================================================================================
      Attribute                           Description  
