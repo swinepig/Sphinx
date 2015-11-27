@@ -116,7 +116,7 @@ div.related ul a {
 }
 
 div.related ul a:hover {
-    color:#ccc;
+    color:#f6be15;
     background-color: white;
 }
 
