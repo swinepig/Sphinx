@@ -194,10 +194,10 @@ Take the following JSF navigation rule, for example:
     
 
 
- * The view id of the page that produces the outcome.
- * The outcome id.
- * The destination view.
- * Optional redirect tag for Redirect-after-post.
+* The view id of the page that produces the outcome.
+* The outcome id.
+* The destination view.
+* Optional redirect tag for Redirect-after-post.
  
 Using Seam, this can be represented in pages.xml as:
 
@@ -213,9 +213,9 @@ Using Seam, this can be represented in pages.xml as:
     
 
 
- * The view id of the page that produces the outcome.
- * The outcome id is specified using <rule if-outcome="...">.
- * The destination is a redirect element in this case. 
+* The view id of the page that produces the outcome.
+* The outcome id is specified using <rule if-outcome="...">.
+* The destination is a redirect element in this case. 
  
 Not only is this more compact than the JSF way, it is also possible to eliminate the outcome strings from the application and replace them with EL expressions using <rule if="... EL expr"> syntax:
 
@@ -231,9 +231,9 @@ Not only is this more compact than the JSF way, it is also possible to eliminate
    
 
 
- * The view id of the page that produces the outcome.
- * Instead of specifying an outcome string, we use an EL expression to invoke a method on a SFSB which will return a boolean.
- * The destination is the same redirect element.
+* The view id of the page that produces the outcome.
+* Instead of specifying an outcome string, we use an EL expression to invoke a method on a SFSB which will return a boolean.
+* The destination is the same redirect element.
  
  
  
@@ -280,9 +280,9 @@ Here are some typical exceptions:
    
 
 
- * You can force Seam to end the current conversation with the <end-conversation/> element.
- * The severity level of the Faces message can be set using the severity attribute.
- * Note that you can use EL in the message, and that there is a 'handledException' context variable set to the actual exception.
+* You can force Seam to end the current conversation with the <end-conversation/> element.
+* The severity level of the Faces message can be set using the severity attribute.
+* Note that you can use EL in the message, and that there is a 'handledException' context variable set to the actual exception.
  
  
 <redirect>
