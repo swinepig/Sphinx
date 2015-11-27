@@ -467,7 +467,7 @@ p.rubric {
 
 img{
  float:right;
- width:50%
+ /*width:50%*/
 }
 
 table.docutils th.head{
