@@ -14,7 +14,7 @@
 /* -- page layout ----------------------------------------------------------- */
  
 body {
-    font-family: 微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
+    font-family: Consolas,微软雅黑,Verdana,Tahoma, Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: #ffffff;
     margin: 0.5em 0.8em 0 0.8em;
@@ -28,7 +28,7 @@ div.documentwrapper {
     padding-bottom: 30px;
     position:absolute;
     overflow-y:auto;
-    top: 52px;
+    top: 53px;
     bottom:37px;
     left:0;
 }
