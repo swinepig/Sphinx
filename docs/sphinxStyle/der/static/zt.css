@@ -993,7 +993,7 @@
 	display: block;
 	position: relative;
 	font-size: 90%;
-	color: #b3b3b3
+	/*color: #b3b3b3*/
 }
 
 .wy-menu-vertical a:hover {
@@ -1036,7 +1036,7 @@
 }
 
 .wy-side-nav-search>a,.wy-side-nav-search .wy-dropdown>a {
-	color: #9c9c9c;
+	/*color: #9c9c9c;*/
 	font-size: 130%;
 	font-weight: bold;
 	display: inline-block;

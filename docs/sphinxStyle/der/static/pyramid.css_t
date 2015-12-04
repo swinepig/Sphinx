@@ -201,7 +201,7 @@ p.sidebar-title {
 a, a .pre {
     color: rgba(8, 5, 5, 0.71);
     text-decoration: none;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
  
 div.body h1,
