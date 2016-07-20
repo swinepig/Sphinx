@@ -250,7 +250,6 @@ a.headerlink:hover {
  
 div.body p, div.body dd, div.body li {
     line-height: 1.5em;
-    text-indent：2em;
 }
  
 div.admonition p.admonition-title + p {
