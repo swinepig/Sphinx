@@ -9,7 +9,9 @@
 
    test/index
    pragram/index
-   graduationThesis/index
+   other/index
+   java/index
+   前端技术/index
 
 
  
