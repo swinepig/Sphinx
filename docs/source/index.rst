@@ -8,7 +8,7 @@
    :maxdepth: 1
 
    java/index
-   前端技术/index
+   front/index
    other/index
 
 
