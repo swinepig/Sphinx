@@ -70,7 +70,6 @@
       })();
 
     </script>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260054577'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260054577%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
@@ -237,8 +236,11 @@
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
+    <script type="text/javascript">
+  	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  	document.write(unescape("%3Cspan id='cnzz_stat_icon_1260054577'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260054577%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  	</script>
     </div>
 {%- endblock %}
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260054577'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260054577%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
   </body>
 </html>
