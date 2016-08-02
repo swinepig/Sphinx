@@ -70,31 +70,6 @@
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
-		   <script>  
-      $(function(){  
-        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
-        $(function () {  
-            $(window).scroll(function(){  
-                if ($(window).scrollTop()>100){  
-                    $("#back-to-top").fadeIn(1500);
-                    console.log("back-to-top fadeIn");  
-                }  
-                else  
-                {  
-                    $("#back-to-top").fadeOut(1500);  
-                    console.log("back-to-top fadeOut");  
-                }  
-            });  
-  
-            //当点击跳转链接后，回到页面顶部位置  
-  
-            $("#back-to-top").click(function(){  
-                $('body,html').animate({scrollTop:0},1000);  
-                return false;  
-            });  
-          });  
-         });  
-      </script> 
 {%- endmacro %}
 
 {%- macro css() %}
@@ -264,5 +239,32 @@
   	</script>
     </div>
 {%- endblock %}
+     <script>  
+      $(function(){  
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
+        $(function () {  
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                console.log($(".documentwrapper").scrollTop());     
+                if ($(".documentwrapper").scrollTop()>100){  
+                    $("#back-to-top").fadeIn(1500);
+                    console.log("back-to-top fadeIn");  
+                }  
+                else  
+                {  
+                    $("#back-to-top").fadeOut(1500);  
+                    console.log("back-to-top fadeOut");  
+                }  
+            });  
+  
+            //当点击跳转链接后，回到页面顶部位置  
+  
+            $("#back-to-top").click(function(){  
+                $('body,html').animate({scrollTop:0},1000);  
+                return false;  
+            });  
+          });  
+         });  
+      </script> 
   </body>
 </html>
