@@ -87,11 +87,8 @@
         weibo4j.Oauth oauth = new weibo4j.Oauth();
         weibo4j.http.AccessToken accessToken = oauth.getAccessTokenByCode(code);
         String uid = accessToken.getUserUid();
- 
         weibo4j.Users users = new weibo4j.Users(accessToken.getAccessToken());
-//        users.client.setToken(accessToken.getAccessToken());
         weibo4j.model.User user = users.showUserById(uid);
- 
         String userDomain = user.getUserDomain(); // 用户登录名
         String c = user.getScreenName(); // 用户呢称
         String avatar = user.getAvatarLarge(); // 用户头像
@@ -108,7 +105,9 @@
         return currentLoginUser;
     }
     
-其中String uid = accessToken.getUserUid();的getUserUid()方法本身是没有的，我们需要修改新浪微博的源代码，不然取uid非常麻烦。
+其中String uid = accessToken.getUserUid();
+
+getUserUid()方法本身是没有的，我们需要修改新浪微博的源代码，不然取uid非常麻烦。
 
 编辑/src/weibo4j.http/AccessToken.java，在：
 
