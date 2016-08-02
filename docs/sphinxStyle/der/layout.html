@@ -67,8 +67,11 @@
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
-    <script>  
-$(function(){  
+    {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+    {%- endfor %}
+		   <script>  
+      $(function(){  
         //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
         $(function () {  
             $(window).scroll(function(){  
@@ -89,13 +92,9 @@ $(function(){
                 $('body,html').animate({scrollTop:0},1000);  
                 return false;  
             });  
-        });  
-    });  
-</script> 
-    {%- for scriptfile in script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
-
+          });  
+         });  
+      </script> 
 {%- endmacro %}
 
 {%- macro css() %}
