@@ -135,7 +135,7 @@
 {% endblock %}
   </head>
   <body>
-  <p id="back-to-top"><a href="#top"><span></span><i class="fa fa-hand-up"></i></a></p> 
+  <p id="back-to-top"><a href="#top"><span></span>Top</a></p> 
 {%- block header %}
 {%- if logo %}
 <div class="header">
@@ -243,24 +243,20 @@
       $(function(){  
         //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
         $(function () {  
-            $(".documentwrapper").scroll(function(){
-                console.log($(window).scrollTop());
-                console.log($(".documentwrapper").scrollTop());     
+            $(".documentwrapper").scroll(function(){    
                 if ($(".documentwrapper").scrollTop()>800){  
                     $("#back-to-top").fadeIn(1500);
-                    console.log("back-to-top fadeIn");  
                 }  
                 else  
                 {  
                     $("#back-to-top").fadeOut(1500);  
-                    console.log("back-to-top fadeOut");  
                 }  
             });  
   
             //当点击跳转链接后，回到页面顶部位置  
   
             $("#back-to-top").click(function(){  
-                $('body,html').animate({scrollTop:0},1000);  
+                $(".documentwrapper").animate({scrollTop:0},1000);  
                 return false;  
             });  
           });  

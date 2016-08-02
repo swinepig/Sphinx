@@ -499,8 +499,9 @@ blockquote {
 p#back-to-top{
     position:fixed;
     display:none;
-    bottom:100px;
+    bottom:60px;
     right:80px;
+    z-index:1000;
 }
 p#back-to-top a{
     text-align:center;
