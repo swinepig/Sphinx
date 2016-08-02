@@ -494,8 +494,3 @@ blockquote {
     padding: 0 15px;
 }
 
-/* -- 返回顶部样式 ----------------------------------------------------------- */
-
-a.backToTop{width:40px; height:40px; background:url(top.gif) no-repeat -51px 0; 
- text-indent:-999em} 
-a.backToTop:hover{background-position:-113px 0}
