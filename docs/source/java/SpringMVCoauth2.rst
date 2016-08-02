@@ -19,6 +19,9 @@
    client_SERCRET =
    redirect_URI =
 
+.. image:: ../../images/fish2.jpg
+
+
 第三个redirect_URI，是你的重定向后的网址。应该对应一个控制器（Spring Controller）或 Servlet。在这里我们需要两个网址，第一个网址即用户在页面上点击的网址，能跳转到新浪微博账号登录界面，当用户点击账号登陆界面的登录按钮时，新浪微博会去校验资料正确性，一旦资料正确将会以 get 方式请求并且携带参数code重定向到你填写的redirect_URI，此时就能获取用户的资料了。
    
 假如首先用户点击 http://localhost/api/weibo/login1，我们接收请求后主要工作是重定向到新浪微博登录页面。代码片段如下：  
