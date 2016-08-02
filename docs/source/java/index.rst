@@ -11,3 +11,4 @@ JAVA方面相关
    ShardedJedisPool
    ConcurrentHashMap
    Pattern
+   SpringMVCoauth2
