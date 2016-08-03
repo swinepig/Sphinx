@@ -1,8 +1,8 @@
-﻿java pragram
+java pragram
 ============
 
 逆时针数字排序
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: java
 
@@ -185,6 +185,6 @@
    }
    
 项目配置文档conf.py
-^^^^^^^^^^^^^^^^^^^  
+^^^^^^^^^^^^^^^^^^^^^^^^  
 .. literalinclude:: conf.py
    :linenos:
