@@ -516,6 +516,7 @@ p#back-to-top a{
 }
 p#back-to-top a:hover{
     color:#979797;
+    background-color:white;
 }
 p#back-to-top a span{
     background:transparent url(warning.png) no-repeat 12px 10px;
@@ -523,12 +524,11 @@ p#back-to-top a span{
     display:block;
     height:40px;
     width:60px;
-    margin-bottom:5px;
     /*使用CSS3中的transition属性给<span>标签背景颜色添加渐变效果*/
     -moz-transition:background 1s;
     -webkit-transition:background 1s;
     -o-transition:background 1s;
 }
 #back-to-top a:hover span{
-    background:transparent url(danger.png) no-repeat 10px 30px;
+    background:transparent url(danger.png) no-repeat 12px 10px;
 }
