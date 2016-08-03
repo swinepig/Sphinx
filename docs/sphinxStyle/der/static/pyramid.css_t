@@ -527,3 +527,9 @@ p#back-to-top a span{
 #back-to-top a:hover span{
     background:transparent url(danger.png) no-repeat 12px 10px;
 }
+
+
+nav.wy-nav-side {
+    /*消除左侧导航滚动条*/
+    padding-bottom: 0em;
+}
