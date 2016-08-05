@@ -12,3 +12,4 @@ JAVA方面相关
    ConcurrentHashMap
    Pattern
    SpringMVCoauth2
+   SpringResponseRequest
