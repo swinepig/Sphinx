@@ -22,9 +22,9 @@ SpringMVC中使用@RequestBody,@ResponseBody注解实现Java对象和XML/JSON数
 
 返回XML格式必须满足两个条件要求：
 
-a) 返回对象的类具有XmlRootElement注解
+ * 返回对象的类具有XmlRootElement注解
 
-b) 请求头中的Accept属性包含application/xml
+ * 请求头中的Accept属性包含application/xml
 
 返回json格式我们只要把Jackson2或者GSON加入工程的class path，Spring就会自动把GsonHttpMessageConverter加进来。
 
@@ -35,11 +35,11 @@ b) 请求头中的Accept属性包含application/xml
 
 作用： 
 
-i) 该注解用于读取Request请求的body部分数据，使用系统默认配置的HttpMessageConverter进行解析，然后把相应的数据绑定到要返回的对象上；
-
-ii) 再把HttpMessageConverter返回的对象数据绑定到 controller中方法的参数上。
+ * 该注解用于读取Request请求的body部分数据，使用系统默认配置的HttpMessageConverter进行解析，然后把相应的数据绑定到要返回的对上
+ * 再把HttpMessageConverter返回的对象数据绑定到 controller中方法的参数上。
 
 使用时机：
+
 A) GET、POST方式提时， 根据request header Content-Type的值来判断:
 
  * application/x-www-form-urlencoded， 可选（即非必须，因为这种情况的数据@RequestParam, @ModelAttribute也可以处理，当然@RequestBody也能处理）；
