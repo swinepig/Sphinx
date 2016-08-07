@@ -240,7 +240,7 @@
     </div>
 {%- endblock %}
      <script>
-     	//使用匿名函数
+     //使用匿名函数
      (function(win){
         var tp = $("#back-to-top");
         $(win).scroll(function(){
@@ -252,7 +252,6 @@
            tp.animate({ bottom: 1100 }, 500);
            $(win).animate({scrollTop:0},1000);
            setTimeout(function(){ tp.hide().css({ bottom: 60 }) }, 500);
-            return false;  
         }); 
      
       })(".documentwrapper");
