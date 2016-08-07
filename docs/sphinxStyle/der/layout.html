@@ -240,15 +240,18 @@
     </div>
 {%- endblock %}
      <script>
+     	//使用匿名函数
      (function(win){
-     	  var tp = $("#back-to-top");
+        var tp = $("#back-to-top");
         $(win).scroll(function(){
+        	//当滚动条的位置处于距顶部1000像素以下时，小飞机出现，否则消失
           $(win).scrollTop()>1000?tp.fadeIn(1500):tp.fadeOut(1500);
         });
      
         tp.click(function(){  
            tp.animate({ bottom: 1100 }, 300);
-           $(win).animate({scrollTop:0},1000);  
+           $(win).animate({scrollTop:0},1000);
+           setTimeout(function(){ tp.hide().css({ bottom: 60 }) }, 500);
             return false;  
         }); 
      
