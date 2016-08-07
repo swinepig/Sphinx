@@ -239,8 +239,23 @@
   	</script>
     </div>
 {%- endblock %}
-     <script>  
-      $(function(){  
+     <script>
+     (function(win){
+     	  var tp = $("#back-to-top");
+        $(win).scroll(function(){
+          $(win).scrollTop()>1000?tp.fadeIn(1500):tp.fadeOut(1500);
+        });
+     
+        tp.click(function(){  
+           tp.animate({ bottom: 1100 }, 300);
+           $(win).animate({scrollTop:0},1000);  
+            return false;  
+        }); 
+     
+      })(.documentwrapper);
+     
+     
+     /* $(function(){  
         //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
         $(function () {  
             $(".documentwrapper").scroll(function(){    
@@ -260,7 +275,7 @@
                 return false;  
             });  
           });  
-         });  
+         });  */
       </script> 
   </body>
 </html>
