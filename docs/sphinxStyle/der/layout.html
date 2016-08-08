@@ -84,6 +84,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     <meta property="wb:webmaster" content="1bff4e509d251d2f" />
+    <meta name="keywords" content="swinepig,Wu-kung Back">
+
     {{ metatags }}
     {%- block htmltitle %}
     <title>{{ titlesuffix }}</title>
@@ -248,10 +250,11 @@
           $(win).scrollTop()>1000?tp.fadeIn(1500):tp.fadeOut(1500);
         });
      
+        //当点击跳转链接后，回到页面顶部位置  
         tp.click(function(){  
-           tp.animate({ bottom: 1100 }, 500);
+           tp.animate({ bottom: '1100px' }, 500);
            $(win).animate({scrollTop:0},1000);
-           setTimeout(function(){ tp.hide().css({ bottom: 60 }) }, 500);
+           setTimeout(function(){ tp.hide().css({ "bottom": '60px' }) }, 100);
         }); 
      
       })(".documentwrapper");
