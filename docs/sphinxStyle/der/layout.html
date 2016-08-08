@@ -180,7 +180,7 @@
 
         <div class="wy-side-nav-search">
         {% block sidebartitle %}
-          <a href="#" class="fa fa-home"> 目录 </a>
+          <a href="/" class="fa fa-home"> 目录 </a>
         {% endblock %}
         </div>
        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -206,10 +206,10 @@
       </div>
       
          {%- if prev %}
-            <a href="{{ prev.link|e }}" class="navigation navigation-prev" id="napre" ><i class="fa fa-angle-left"></i></a>
+            <a href="{{ prev.link|e }}" class="navigation navigation-prev" id="napre" title="{{ prev.title|striptags|e }}"><i class="fa fa-angle-left"></i></a>
           {%- endif %}
           {%- if next %}
-            <a href="{{ next.link|e }}" class="navigation navigation-next" id="nanext" style="right:38px"><i class="fa fa-angle-right"></i></a>
+            <a href="{{ next.link|e }}" class="navigation navigation-next" id="nanext" style="right:38px" title="{{ next.title|striptags|e }}"><i class="fa fa-angle-right"></i></a>
           {%- endif %}
   {%- endblock %}
 
