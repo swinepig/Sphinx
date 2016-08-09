@@ -10,3 +10,4 @@
 
    graduationThesis
    test
+   android&IDEA
