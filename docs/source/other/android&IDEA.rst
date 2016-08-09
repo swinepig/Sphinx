@@ -18,6 +18,7 @@
 .. _my-reference-label1:
 
 第一步：安装JDK
+----------------
 
 作为一个JAVA Coder对于JDK的下载，安装应该都是熟能生巧了在这就不过多的啰嗦了=。=
 
@@ -26,6 +27,7 @@
 .. _my-reference-label2:
 
 第二步：下载安装Android SDK
+----------------------------------------
 
 安装好JDK后，因为要开发Android程序还需另行下载Android SDK（Software Development Kit）
 
@@ -41,6 +43,8 @@ Android SDK下载网址：http://developer.android.com/sdk/index.html
 .. _my-reference-label3:
 
 第三步：下载安装IntelliJ IDEA
+--------------------------------
+
 
 在这步使用IDEA代替Eclipse(开发Android需要ADT插件支持)，IDEA对Android开发的支持是内置的，不再需要其他插件。
 
@@ -72,7 +76,9 @@ IDEA下载网址：http://www.jetbrains.com/idea/ 如果只想进行Android开�
 
 
 https://developer.android.com/studio/index.html  android SDK下载网址
+
 http://www.cnblogs.com/zoupeiyang/p/4034517.html#1  Android开发环境搭建教程
+
 http://www.tuicool.com/articles/a2MNna IntelliJ IDEA 搭建Android集成开发环境
 
  
