@@ -205,7 +205,6 @@ a, a .pre {
 }
 
 .reference{
-	color:black;
 	font-weight:bold;
 }
 
