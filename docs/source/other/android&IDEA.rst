@@ -62,7 +62,7 @@ IDEA下载网址：http://www.jetbrains.com/idea/ 如果只想进行Android开�
 
 .. note:: 
    IntelliJ IDEA中的Project，并不是真正的project，相当于Eclipse中的Workspace
-   
+
    在创建Android项目之前需要在IDEA中配置好JDK和SDK
   
 比较下两者之间的概念差异
@@ -87,11 +87,7 @@ IDEA下载网址：http://www.jetbrains.com/idea/ 如果只想进行Android开�
 
 .. image:: ../../images/android-Idea/IDEA6.png
 
-在这一步可以选择不同的布局，选择下一步：
-
-.. image:: ../../images/android-Idea/IDEA6.png
-
-如果没之前没下载Gradle，这时IEDA会下载Gradle并build刚才的Android项目
+在这一步可以选择不同的布局，选择下一步：如果没之前没下载Gradle，这时IEDA会下载Gradle并build刚才的Android项目
 
 .. image:: ../../images/android-Idea/IDEA7.png
 
