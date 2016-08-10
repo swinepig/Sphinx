@@ -62,18 +62,38 @@ IDEA下载网址：http://www.jetbrains.com/idea/ 如果只想进行Android开�
 
 .. note:: 
    IntelliJ IDEA中的Project，并不是真正的project，相当于Eclipse中的Workspace
+   
+   在创建Android项目之前需要在IDEA中配置好JDK和SDK
   
 比较下两者之间的概念差异
 
 =========================   ============================================  ========================================= 
-                                    eclipse                                 IEDA/Android Studio
+   ........                             eclipse                                 IEDA/Android Studio
 =========================   ============================================  =========================================
     工作区                          workspace                                 project
     项目                            project                                   module      
     引用                            preference                              module dependency
 =========================   ============================================  =========================================
 
+弹出对话框
 
+.. image:: ../../images/android-Idea/IDEA4.png
+
+在上图中选择Android选项Configure your new project,点击下一步：
+
+.. image:: ../../images/android-Idea/IDEA5.png
+
+这跟我们在Eclipse的插件ADT中开发是类似的。接着选择下一步：
+
+.. image:: ../../images/android-Idea/IDEA6.png
+
+在这一步可以选择不同的布局，选择下一步：
+
+.. image:: ../../images/android-Idea/IDEA6.png
+
+如果没之前没下载Gradle，这时IEDA会下载Gradle并build刚才的Android项目
+
+.. image:: ../../images/android-Idea/IDEA7.png
 
 https://developer.android.com/studio/index.html  android SDK下载网址
 
