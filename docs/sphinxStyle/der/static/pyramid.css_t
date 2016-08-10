@@ -203,7 +203,12 @@ a, a .pre {
     text-decoration: none;
     /*font-weight: bold;*/
 }
- 
+
+.reference{
+	color:black;
+	font-weight:bold;
+}
+
 div.body h1,
 div.body h2,
 div.body h3,
