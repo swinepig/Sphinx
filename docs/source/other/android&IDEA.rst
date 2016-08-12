@@ -91,10 +91,5 @@ IDEA下载网址：http://www.jetbrains.com/idea/ 如果只想进行Android开�
 
 .. image:: ../../images/android-Idea/IDEA7.png
 
-https://developer.android.com/studio/index.html  android SDK下载网址
-
-http://www.cnblogs.com/zoupeiyang/p/4034517.html#1  Android开发环境搭建教程
-
-http://www.tuicool.com/articles/a2MNna IntelliJ IDEA 搭建Android集成开发环境
 
  
