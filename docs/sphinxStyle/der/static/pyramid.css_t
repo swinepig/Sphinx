@@ -321,7 +321,8 @@ p.admonition-title {
 
  
 pre {
-    background-color: black;
+	  background:url(blueprint.png) #EFEFEF;
+    /*background-color: #EFEFEF;*/
     border-width: thin;
     border-color: #dcdcdc;
     padding: 10px 15px 10px 15px;
