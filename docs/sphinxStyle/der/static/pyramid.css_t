@@ -499,7 +499,7 @@ blockquote {
     padding: 0 15px;
 }
 
-/**-------------返回顶部样式---------------**/
+/**-------------返回顶部样式开始---------------**/
 /*returnTop*/
 p#back-to-top{
     position:fixed;
@@ -532,9 +532,15 @@ p#back-to-top a span{
 #back-to-top a:hover span{
     background:transparent url(rocket_white.png) no-repeat 12px 10px;
 }
-
+/**-------------返回顶部样式结束---------------**/
 
 nav.wy-nav-side {
     /*消除左侧导航滚动条*/
     padding-bottom: 0em;
+}
+
+
+/**-------------微博秀覆盖---------------**/
+.header_container,.bottom_part{
+	display：none;
 }
