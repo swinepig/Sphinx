@@ -11,3 +11,4 @@
    graduationThesis
    test
    android&IDEA
+   db2datatransfer
