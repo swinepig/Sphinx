@@ -18,10 +18,10 @@
   * 本地数据恢复(import)
   
 具体详细步骤：
-------------------
+^^^^^^^^^^^^^^^^^^
 
 源数据源数据导出  
-^^^^^^^^^^^^^^^^^^^^
+------------------
 
 .. code-block:: ruby
 
@@ -31,7 +31,7 @@
 exportData.sql中类似 ``export to XX.del OF DEL SELECT * FROM XX`` 语句
 
 源数据库表结构等导出  
-^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 .. code-block:: ruby
 
@@ -39,7 +39,7 @@ exportData.sql中类似 ``export to XX.del OF DEL SELECT * FROM XX`` 语句
    
    
 重建数据库  
-^^^^^^^^^^^^^^^^^^^^ 
+------------------
 
 .. code-block:: ruby
 
@@ -57,14 +57,14 @@ exportData.sql中类似 ``export to XX.del OF DEL SELECT * FROM XX`` 语句
    
 
 本地数据结构恢复
-^^^^^^^^^^^^^^^^^^^^   
+------------------   
 
 .. code-block:: ruby
   
    db2 -tvf db2look.sql 
    
 本地数据恢复
-^^^^^^^^^^^^^^^^^^^^ 
+------------------ 
 
 .. code-block:: ruby
   
@@ -78,7 +78,7 @@ importDate.sql中类似 ``import from  XX.del OF DEL replace into XX`` 语句
 
 
 碰到的问题
-------------------
+^^^^^^^^^^^^^^^^^^^^
    
 现象：数据库安装好后，需安装应用服务器WEBLOGIC,在应用部署到WEBLOGIC上后出现 ``org.hibernate.QueryException: ClassNotFoundException: org.hibernate.hql.ast.HqlToken`` 异常
 
