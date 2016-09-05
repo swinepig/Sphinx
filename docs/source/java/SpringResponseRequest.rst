@@ -10,7 +10,7 @@ SpringMVC中使用@RequestBody,@ResponseBody注解实现Java对象和XML/JSON数
 
 我们可以用下面的图，简单描述一下这个过程。
 
-.. image:: ../../images/java/sp_res_req1.jsp
+.. image:: ../../images/java/sp_res_req1.jpg
 
 @Response篇
 ^^^^^^^^^^^^^^^^^^
